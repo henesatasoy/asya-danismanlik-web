@@ -74,88 +74,95 @@ const Projects = () => {
       </section>
 
       {/* Statistics */}
-      <section className="py-16 bg-secondary">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <h3 className="text-4xl font-bold text-gold mb-2">500+</h3>
-              <p className="text-muted-foreground">Tamamlanan Proje</p>
+            <div className="animate-slide-up">
+              <h3 className="text-4xl font-light text-gold mb-3 tracking-wide">500<span className="text-2xl">+</span></h3>
+              <p className="text-muted-foreground font-light">Tamamlanan Proje</p>
             </div>
-            <div>
-              <h3 className="text-4xl font-bold text-gold mb-2">₺2.5B</h3>
-              <p className="text-muted-foreground">Toplam Yatırım Değeri</p>
+            <div className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
+              <h3 className="text-4xl font-light text-gold mb-3 tracking-wide">₺2.5<span className="text-2xl">B</span></h3>
+              <p className="text-muted-foreground font-light">Toplam Yatırım Değeri</p>
             </div>
-            <div>
-              <h3 className="text-4xl font-bold text-gold mb-2">15,000+</h3>
-              <p className="text-muted-foreground">Yaratılan İstihdam</p>
+            <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <h3 className="text-4xl font-light text-gold mb-3 tracking-wide">15,000<span className="text-2xl">+</span></h3>
+              <p className="text-muted-foreground font-light">Yaratılan İstihdam</p>
             </div>
-            <div>
-              <h3 className="text-4xl font-bold text-gold mb-2">250+</h3>
-              <p className="text-muted-foreground">Memnun Müşteri</p>
+            <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+              <h3 className="text-4xl font-light text-gold mb-3 tracking-wide">250<span className="text-2xl">+</span></h3>
+              <p className="text-muted-foreground font-light">Memnun Müşteri</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Başarı Hikayelerimiz
+          <div className="text-center mb-20 animate-slide-up">
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 tracking-wide">
+              <span className="font-semibold text-gold">Başarı</span> Hikayelerimiz
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto font-light leading-relaxed">
               Farklı sektörlerden seçtiğimiz başarılı proje örnekleri
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-glow transition-all duration-500 hover:-translate-y-3 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mr-4 group-hover:bg-gold/30 group-hover:shadow-glow transition-all duration-300`}>
-                      <project.icon size={24} className="text-gold group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <Badge variant="secondary" className="bg-gold/10 text-gold">
-                      {project.category}
-                    </Badge>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-gold transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-gold text-sm">Sonuçlar:</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      {project.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="flex items-center">
-                          <div className="w-1.5 h-1.5 rounded-full bg-gold mr-2"></div>
-                          {result}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+             {projects.map((project, index) => (
+               <div key={index} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                 <Card className="group hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden h-full">
+                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-gold-light transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                   <CardContent className="p-6">
+                     <div className="flex items-center mb-4">
+                       <div className={`w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mr-4 group-hover:bg-gold/30 group-hover:shadow-glow transition-all duration-300`}>
+                         <project.icon size={24} className="text-gold group-hover:scale-110 transition-transform duration-300" />
+                       </div>
+                       <Badge variant="secondary" className="bg-gold/10 text-gold">
+                         {project.category}
+                       </Badge>
+                     </div>
+                     
+                     <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-gold transition-colors duration-300">
+                       {project.title}
+                     </h3>
+                     
+                     <p className="text-muted-foreground mb-4 leading-relaxed">
+                       {project.description}
+                     </p>
+                     
+                     <div className="space-y-2">
+                       <h4 className="font-semibold text-gold text-sm">Sonuçlar:</h4>
+                       <ul className="text-sm text-muted-foreground space-y-1">
+                         {project.results.map((result, resultIndex) => (
+                           <li key={resultIndex} className="flex items-center">
+                             <div className="w-1.5 h-1.5 rounded-full bg-gold mr-2"></div>
+                             {result}
+                           </li>
+                         ))}
+                       </ul>
+                     </div>
+                   </CardContent>
+                 </Card>
+               </div>
+              ))}
           </div>
         </div>
       </section>
 
       {/* Sectors */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Hizmet Verdiğimiz Sektörler
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-20 animate-slide-up">
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 tracking-wide">
+              <span className="font-semibold text-gold">Hizmet Verdiğimiz</span> Sektörler
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto font-light leading-relaxed">
               Geniş sektörel deneyimimiz ile her alanda profesyonel çözümler sunuyoruz
             </p>
           </div>

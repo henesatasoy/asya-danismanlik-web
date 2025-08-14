@@ -61,14 +61,15 @@ const Contact = () => {
       </section>
 
       {/* Contact Info & Form */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16">
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20">
             
             {/* İletişim Bilgileri */}
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8">
-                İletişim Bilgileri
+            <div className="animate-slide-up">
+              <h2 className="text-3xl font-light text-foreground mb-10 tracking-wide">
+                <span className="text-gold font-semibold">İletişim</span> Bilgileri
               </h2>
               
               <div className="space-y-6">
@@ -143,9 +144,9 @@ const Contact = () => {
             </div>
 
             {/* İletişim Formu */}
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8">
-                Bize Ulaşın
+            <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <h2 className="text-3xl font-light text-foreground mb-10 tracking-wide">
+                <span className="text-gold font-semibold">Bize</span> Ulaşın
               </h2>
               
               <Card className="hover:shadow-elegant transition-all duration-300">

@@ -24,23 +24,24 @@ const Services = () => {
       </section>
 
       {/* Services Detail */}
-      <section className="py-20">
-        <div className="container mx-auto px-6 space-y-20">
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container mx-auto px-6 space-y-24 relative z-10">
           
           {/* Yatırım Teşvik */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center animate-slide-up">
             <div className="order-2 md:order-1">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 mr-4 bg-gold/10 rounded-full flex items-center justify-center">
-                  <DollarSign className="w-8 h-8 text-gold" />
+              <div className="flex items-center mb-8">
+                <div className="w-20 h-20 mr-6 bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl flex items-center justify-center hover:shadow-glow transition-all duration-500">
+                  <DollarSign className="w-10 h-10 text-gold" />
                 </div>
-                <h2 className="text-4xl font-bold text-gold">Yatırım Teşvik</h2>
+                <h2 className="text-3xl md:text-4xl font-light text-gold tracking-wide">Yatırım Teşvik</h2>
               </div>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed font-light">
                 Devlet teşviklerinden maksimum fayda sağlayacak stratejiler geliştiriyor, 
                 yatırım projelerinizin her aşamasında profesyonel destek sunuyoruz.
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-4 mb-10">
                 <li className="flex items-start">
                   <CheckCircle className="text-gold mr-3 mt-1 flex-shrink-0" size={20} />
                   <span>Yatırım teşvik başvuru süreçlerinin yönetimi</span>
