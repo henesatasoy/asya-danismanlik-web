@@ -20,13 +20,13 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-24",
         isScrolled 
           ? "bg-background/95 backdrop-blur-sm shadow-elegant" 
           : "bg-transparent"
       )}
     >
-      <nav className="container mx-auto px-6 py-6">
+      <nav className="container mx-auto px-6 h-full flex items-center">
         <div className="flex items-center">
           {/* Sol menü */}
           <div className="flex items-center justify-start space-x-8 flex-1">
