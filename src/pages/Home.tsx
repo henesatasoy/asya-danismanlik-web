@@ -24,7 +24,7 @@ const Home = () => {
             <img 
               src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
               alt="Asya Danışmanlık Logo" 
-              className="h-32 md:h-40 w-auto mx-auto mb-6 animate-scale-in"
+              className="h-48 md:h-56 w-auto mx-auto mb-6 animate-scale-in"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
