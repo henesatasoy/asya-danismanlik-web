@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, TrendingUp, Users, Target, DollarSign, Building, Zap } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Target, DollarSign, Building, Zap, Info, Briefcase, Mail, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-bg.jpg';
 import FloatingParticles from '@/components/FloatingParticles';
@@ -193,6 +193,171 @@ const Home = () => {
               <Link to="/contact">
                 İletişime Geçin
                 <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform duration-300" size={18} />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-24 bg-gradient-to-br from-white to-gray-50 relative">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 tracking-wide">
+                <span className="font-semibold text-gold">Hakkımızda</span>
+              </h2>
+              <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-light text-gold mb-4">
+                  10+ Yıllık Deneyim ile Güvenilir Ortağınız
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Asya Danışmanlık olarak, işletmenizin büyümesi ve başarısı için 
+                  stratejik çözümler sunuyoruz. Deneyimli ekibimizle sektörün 
+                  dinamiklerini takip ediyor, müşterilerimize özel çözümler geliştiriyoruz.
+                </p>
+                <Button asChild variant="outline" className="border-gold/50 text-gold hover:bg-gold hover:text-primary">
+                  <Link to="/about">
+                    Detayları Keşfedin
+                    <ArrowRight className="ml-2" size={16} />
+                  </Link>
+                </Button>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-6">
+                <Card className="p-6 text-center border-0 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-gold/10 rounded-xl flex items-center justify-center">
+                    <Award className="w-6 h-6 text-gold" />
+                  </div>
+                  <h4 className="text-lg font-medium text-gold mb-2">Uzman Ekip</h4>
+                  <p className="text-sm text-muted-foreground">Alanında deneyimli profesyoneller</p>
+                </Card>
+                
+                <Card className="p-6 text-center border-0 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-gold/10 rounded-xl flex items-center justify-center">
+                    <Target className="w-6 h-6 text-gold" />
+                  </div>
+                  <h4 className="text-lg font-medium text-gold mb-2">Hedef Odaklı</h4>
+                  <p className="text-sm text-muted-foreground">Sonuç odaklı yaklaşım</p>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 tracking-wide">
+              <span className="font-semibold text-gold">Projelerimiz</span>
+            </h2>
+            <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Gerçekleştirdiğimiz başarılı projeler ve çözüm ortaklıklarımız
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Card className="group hover:shadow-glow transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-gold/10 to-gold/5 rounded-xl flex items-center justify-center">
+                  <Briefcase className="w-8 h-8 text-gold" />
+                </div>
+                <h3 className="text-xl font-medium text-gold mb-4">İmalat Sektörü</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Büyük ölçekli üretim tesisleri için teşvik danışmanlığı ve iş geliştirme projeleri
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="group hover:shadow-glow transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-gold/10 to-gold/5 rounded-xl flex items-center justify-center">
+                  <TrendingUp className="w-8 h-8 text-gold" />
+                </div>
+                <h3 className="text-xl font-medium text-gold mb-4">Teknoloji</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Yazılım ve teknoloji şirketleri için stratejik büyüme planlaması
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="group hover:shadow-glow transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-gold/10 to-gold/5 rounded-xl flex items-center justify-center">
+                  <Building className="w-8 h-8 text-gold" />
+                </div>
+                <h3 className="text-xl font-medium text-gold mb-4">Hizmet Sektörü</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Hizmet işletmeleri için operasyonel verimlilik ve kapasite artırımı
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="text-center">
+            <Button asChild variant="outline" className="border-gold/50 text-gold hover:bg-gold hover:text-primary">
+              <Link to="/projects">
+                Tüm Projeleri Görüntüle
+                <ArrowRight className="ml-2" size={16} />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Preview Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-12">
+              <h2 className="text-3xl md:text-4xl font-light mb-6 tracking-wide">
+                <span className="font-semibold text-gold">İletişim</span>
+              </h2>
+              <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
+              <p className="text-xl text-white/80 leading-relaxed font-light">
+                Projeleriniz için güvenilir bir ortak arıyorsanız, 
+                uzman ekibimizle iletişime geçin.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gold to-gold-light rounded-xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-all duration-300">
+                  <Mail className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-lg font-medium text-gold mb-2">E-posta</h3>
+                <p className="text-white/70 text-sm">info@asyadanismanlik.com</p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gold to-gold-light rounded-xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-all duration-300">
+                  <Building className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-lg font-medium text-gold mb-2">Ofis</h3>
+                <p className="text-white/70 text-sm">İstanbul / Türkiye</p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gold to-gold-light rounded-xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-all duration-300">
+                  <Users className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-lg font-medium text-gold mb-2">Danışmanlık</h3>
+                <p className="text-white/70 text-sm">Ücretsiz ön görüşme</p>
+              </div>
+            </div>
+            
+            <Button asChild variant="elegant" size="lg" className="px-12 py-4">
+              <Link to="/contact">
+                İletişime Geçin
+                <ArrowRight className="ml-2" size={20} />
               </Link>
             </Button>
           </div>
