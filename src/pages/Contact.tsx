@@ -44,12 +44,16 @@ const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-dark text-white py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            İletişim
+      <section className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-light mb-8 animate-fade-in tracking-wide">
+            <span className="text-gold">İletişim</span>
           </h1>
-          <p className="text-xl max-w-3xl mx-auto text-gray-200 animate-slide-up">
+          <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
+          <p className="text-xl max-w-2xl mx-auto text-white/80 animate-slide-up font-light leading-relaxed">
             Projeleriniz hakkında konuşmak ve size nasıl yardımcı olabileceğimizi 
             öğrenmek için bizimle iletişime geçin.
           </p>

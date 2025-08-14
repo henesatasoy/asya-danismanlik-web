@@ -5,12 +5,16 @@ const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-dark text-white py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            Hakkımızda
+      <section className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-light mb-8 animate-fade-in tracking-wide">
+            <span className="text-gold">Hakkımızda</span>
           </h1>
-          <p className="text-xl max-w-3xl mx-auto text-gray-200 animate-slide-up">
+          <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
+          <p className="text-xl max-w-2xl mx-auto text-white/80 animate-slide-up font-light leading-relaxed">
             10 yılı aşkın deneyimimizle, iş dünyasının dinamik yapısında 
             şirketlere güvenilir danışmanlık hizmetleri sunuyoruz.
           </p>
@@ -18,16 +22,18 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="hover:shadow-glow transition-all duration-500 hover:-translate-y-2 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6 hover:shadow-glow hover:scale-110 transition-all duration-300">
-                  <Target size={32} className="text-primary" />
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid md:grid-cols-2 gap-16">
+            <Card className="hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-gold-light"></div>
+              <CardContent className="p-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-gold to-gold-light rounded-2xl flex items-center justify-center mb-8 shadow-glow">
+                  <Target size={36} className="text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold text-gold mb-4">Misyonumuz</h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <h2 className="text-3xl font-light text-gold mb-6 tracking-wide">Misyonumuz</h2>
+                <p className="text-muted-foreground leading-relaxed font-light">
                   İş dünyasının karmaşık süreçlerinde müşterilerimize rehberlik ederek, 
                   onların hedeflerine ulaşmalarını sağlamak. Uzman kadromuz ve deneyimimiz 
                   ile en uygun çözümleri sunarak, şirketlerin sürdürülebilir büyümesine 
@@ -36,13 +42,14 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-glow transition-all duration-500 hover:-translate-y-2 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6 hover:shadow-glow hover:scale-110 transition-all duration-300">
-                  <Globe size={32} className="text-primary" />
+            <Card className="hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-gold-light"></div>
+              <CardContent className="p-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-gold to-gold-light rounded-2xl flex items-center justify-center mb-8 shadow-glow">
+                  <Globe size={36} className="text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold text-gold mb-4">Vizyonumuz</h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <h2 className="text-3xl font-light text-gold mb-6 tracking-wide">Vizyonumuz</h2>
+                <p className="text-muted-foreground leading-relaxed font-light">
                   Türkiye'nin önde gelen danışmanlık şirketlerinden biri olmak ve 
                   uluslararası pazarlarda da tanınan bir marka haline gelmek. 
                   İnovatif yaklaşımlarımız ve müşteri odaklı hizmet anlayışımızla 
@@ -55,13 +62,14 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-20">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Değerlerimiz
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 tracking-wide">
+              <span className="font-semibold text-gold">Değer</span>lerimiz
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto font-light leading-relaxed">
               İş yapış şeklimizi ve müşteri ilişkilerimizi yönlendiren temel değerlerimiz
             </p>
           </div>
