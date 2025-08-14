@@ -5,56 +5,53 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
-          {/* Mobilde logo ve menü yan yana, Desktop'ta menü sol, logo ortada */}
-          <div className="flex flex-row md:flex-row justify-between md:justify-start items-center md:items-start w-full md:w-auto mb-8 md:mb-0">
-            {/* Menü linkler - mobilde sol tarafta alt alta, desktop'ta da sol tarafta alt alta */}
-            <div className="flex flex-col space-y-3 md:space-y-4">
-              <Link
-                to="/"
-                className="text-sm hover:text-gold transition-colors duration-300"
-              >
-                Ana Sayfa
-              </Link>
-              <Link
-                to="/about"
-                className="text-sm hover:text-gold transition-colors duration-300"
-              >
-                Hakkımızda
-              </Link>
-              <Link
-                to="/contact"
-                className="text-sm hover:text-gold transition-colors duration-300"
-              >
-                İletişim
-              </Link>
-              <Link
-                to="/services"
-                className="text-sm hover:text-gold transition-colors duration-300"
-              >
-                Hizmetlerimiz
-              </Link>
-              <Link
-                to="/projects"
-                className="text-sm hover:text-gold transition-colors duration-300"
-              >
-                Projelerimiz
-              </Link>
-            </div>
+        {/* Logo tam ortada */}
+        <div className="flex justify-center mb-8">
+          <Link
+            to="/"
+            className="hover:opacity-80 transition-opacity duration-300"
+          >
+            <img 
+              src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
+              alt="Asya Danışmanlık Logo" 
+              className="h-72 md:h-42 w-auto"
+            />
+          </Link>
+        </div>
 
-            {/* Logo - mobilde sağ tarafta büyük, desktop'ta ortada */}
-            <div className="flex items-center md:flex-1 md:justify-center">
-              <Link
-                to="/"
-                className="hover:opacity-80 transition-opacity duration-300"
-              >
-                <img 
-                  src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
-                  alt="Asya Danışmanlık Logo" 
-                  className="h-48 md:h-28 w-auto"
-                />
-              </Link>
-            </div>
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
+          {/* Menü linkler - mobilde ortada, desktop'ta solda */}
+          <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 mb-8 md:mb-0">
+            <Link
+              to="/"
+              className="text-sm hover:text-gold transition-colors duration-300 text-center md:text-left"
+            >
+              Ana Sayfa
+            </Link>
+            <Link
+              to="/about"
+              className="text-sm hover:text-gold transition-colors duration-300 text-center md:text-left"
+            >
+              Hakkımızda
+            </Link>
+            <Link
+              to="/contact"
+              className="text-sm hover:text-gold transition-colors duration-300 text-center md:text-left"
+            >
+              İletişim
+            </Link>
+            <Link
+              to="/services"
+              className="text-sm hover:text-gold transition-colors duration-300 text-center md:text-left"
+            >
+              Hizmetlerimiz
+            </Link>
+            <Link
+              to="/projects"
+              className="text-sm hover:text-gold transition-colors duration-300 text-center md:text-left"
+            >
+              Projelerimiz
+            </Link>
           </div>
 
           {/* Adres bilgisi ve sosyal medya sağda */}
