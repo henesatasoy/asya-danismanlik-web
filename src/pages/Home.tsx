@@ -6,12 +6,10 @@ import heroImage from '@/assets/hero-bg.jpg';
 import investmentIcon from '@/assets/investment-icon.png';
 import businessIcon from '@/assets/business-icon.png';
 import capacityIcon from '@/assets/capacity-icon.png';
-import BackgroundRemovalProcessor from '@/components/BackgroundRemovalProcessor';
 
 const Home = () => {
   return (
     <div>
-      <BackgroundRemovalProcessor />
       {/* Hero Section */}
       <section 
         className="relative h-[80vh] flex items-center justify-center text-center text-white"
@@ -24,7 +22,7 @@ const Home = () => {
         <div className="container mx-auto px-6 animate-fade-in">
           <div className="mb-8">
             <img 
-              src="/lovable-uploads/833b85de-a743-435b-9409-48d1da99f7fe.png" 
+              src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
               alt="Asya Danışmanlık Logo" 
               className="h-32 md:h-40 w-auto mx-auto mb-6 animate-scale-in"
             />

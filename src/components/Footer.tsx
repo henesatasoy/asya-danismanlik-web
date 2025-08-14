@@ -13,7 +13,7 @@ const Footer = () => {
               className="hover:opacity-80 transition-opacity duration-300"
             >
               <img 
-                src="/lovable-uploads/833b85de-a743-435b-9409-48d1da99f7fe.png" 
+                src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
                 alt="Asya Danışmanlık Logo" 
                 className="h-14 w-auto"
               />
