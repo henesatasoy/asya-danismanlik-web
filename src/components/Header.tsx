@@ -29,7 +29,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 h-full flex items-center">
         <div className="w-full grid grid-cols-[1fr_auto_1fr] items-center">
           {/* Sol menü */}
-          <div className="flex items-center justify-start space-x-6">
+          <div className="flex items-center justify-end space-x-4">
             <Link
               to="/about"
               className={cn(
@@ -53,7 +53,7 @@ const Header = () => {
           </div>
 
           {/* Logo ortada */}
-          <div className="flex justify-center px-8">
+          <div className="flex justify-center px-4">
             <Link
               to="/"
               className="hover:opacity-80 transition-opacity duration-300"
@@ -67,7 +67,7 @@ const Header = () => {
           </div>
 
           {/* Sağ menü */}
-          <div className="flex items-center justify-end space-x-6">
+          <div className="flex items-center justify-start space-x-4">
             <Link
               to="/services"
               className={cn(
