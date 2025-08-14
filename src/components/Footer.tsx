@@ -57,18 +57,27 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Desktop logo */}
-          <div className="hidden md:block text-center">
-            <Link
-              to="/"
-              className="hover:opacity-80 transition-opacity duration-300"
-            >
-              <img 
-                src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
-                alt="Asya Danışmanlık Logo" 
-                className="h-28 w-auto mx-auto"
-              />
-            </Link>
+          {/* Desktop simetrik düzen */}
+          <div className="hidden md:grid w-full grid-cols-3 items-start gap-8">
+            {/* Sol boş alan - hizalama için */}
+            <div></div>
+            
+            {/* Logo ortada */}
+            <div className="flex justify-center">
+              <Link
+                to="/"
+                className="hover:opacity-80 transition-opacity duration-300"
+              >
+                <img 
+                  src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
+                  alt="Asya Danışmanlık Logo" 
+                  className="h-28 w-auto"
+                />
+              </Link>
+            </div>
+
+            {/* Sağ boş alan - hizalama için */}
+            <div></div>
           </div>
 
           {/* Adres bilgisi ve sosyal medya sağda */}
