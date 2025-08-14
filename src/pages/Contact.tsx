@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
+import { useScrollAnimation, useSlideLeftAnimation, useSlideRightAnimation, useScaleInAnimation, useRotateInAnimation, useZoomInAnimation, useFlipInAnimation, useElasticAnimation } from '@/hooks/useScrollAnimation';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,16 +18,17 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  // Scroll animations
+  // Scroll animations - farklı efekt türleri
   const heroAnimation = useScrollAnimation();
-  const contactInfoAnimation = useScrollAnimation();
-  const formAnimation = useScrollAnimation();
-  const mapAnimation = useScrollAnimation();
+  const contactInfoAnimation = useSlideLeftAnimation();
+  const formAnimation = useSlideRightAnimation();
+  const mapAnimation = useZoomInAnimation();
   
-  const addressCard = useStaggeredAnimation(100);
-  const phoneCard = useStaggeredAnimation(200);
-  const emailCard = useStaggeredAnimation(300);
-  const hoursCard = useStaggeredAnimation(400);
+  // Her kart için farklı efektler
+  const addressCard = useRotateInAnimation(100);
+  const phoneCard = useFlipInAnimation(200);
+  const emailCard = useScaleInAnimation(300);
+  const hoursCard = useElasticAnimation(400);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -61,16 +62,16 @@ const Contact = () => {
         className="bg-gradient-dark text-white py-20"
       >
         <div className="container mx-auto px-6 text-center">
-          <h1 className={`text-5xl font-bold mb-6 transition-all duration-700 ${
+          <h1 className={`text-5xl font-bold mb-6 transition-all duration-1000 ${
             heroAnimation.isVisible 
-              ? 'opacity-100 translate-y-0' 
+              ? 'opacity-100 translate-y-0 animate-scale-in' 
               : 'opacity-0 translate-y-10'
           }`}>
             İletişim
           </h1>
-          <p className={`text-xl max-w-3xl mx-auto text-gray-200 transition-all duration-700 delay-200 ${
+          <p className={`text-xl max-w-3xl mx-auto text-gray-200 transition-all duration-1000 delay-300 ${
             heroAnimation.isVisible 
-              ? 'opacity-100 translate-y-0' 
+              ? 'opacity-100 translate-y-0 animate-fade-in' 
               : 'opacity-0 translate-y-10'
           }`}>
             Projeleriniz hakkında konuşmak ve size nasıl yardımcı olabileceğimizi 
@@ -86,11 +87,8 @@ const Contact = () => {
             
             {/* İletişim Bilgileri */}
             <div ref={contactInfoAnimation.elementRef}>
-              <h2 className={`text-3xl font-bold text-foreground mb-8 transition-all duration-700 ${
-                contactInfoAnimation.isVisible 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-10'
-              }`}>
+              <h2 className={`text-3xl font-bold text-foreground mb-8 ${contactInfoAnimation.className}`}
+                  style={contactInfoAnimation.style}>
                 İletişim Bilgileri
               </h2>
               
@@ -183,19 +181,13 @@ const Contact = () => {
 
             {/* İletişim Formu */}
             <div ref={formAnimation.elementRef}>
-              <h2 className={`text-3xl font-bold text-foreground mb-8 transition-all duration-700 ${
-                formAnimation.isVisible 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-10'
-              }`}>
+              <h2 className={`text-3xl font-bold text-foreground mb-8 ${formAnimation.className}`}
+                  style={formAnimation.style}>
                 Bize Ulaşın
               </h2>
               
-              <Card className={`hover:shadow-elegant transition-all duration-700 delay-200 ${
-                formAnimation.isVisible 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-10'
-              }`}>
+              <Card className={`hover:shadow-elegant transition-all duration-700 delay-200 ${formAnimation.className}`}
+                   style={{...formAnimation.style, animationDelay: '400ms'}}>
                 <CardContent className="p-8">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
@@ -298,27 +290,18 @@ const Contact = () => {
       >
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className={`text-4xl font-bold text-foreground mb-4 transition-all duration-700 ${
-              mapAnimation.isVisible 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-10'
-            }`}>
+            <h2 className={`text-4xl font-bold text-foreground mb-4 ${mapAnimation.className}`}
+                style={mapAnimation.style}>
               Ofisimizi Ziyaret Edin
             </h2>
-            <p className={`text-lg text-muted-foreground transition-all duration-700 delay-200 ${
-              mapAnimation.isVisible 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-10'
-            }`}>
+            <p className={`text-lg text-muted-foreground ${mapAnimation.className}`}
+               style={{...mapAnimation.style, animationDelay: '200ms'}}>
               Bolu merkez lokasyonumuzda sizleri ağırlamaktan mutluluk duyarız.
             </p>
           </div>
           
-          <Card className={`overflow-hidden hover:shadow-elegant transition-all duration-700 delay-300 ${
-            mapAnimation.isVisible 
-              ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-10'
-          }`}>
+          <Card className={`overflow-hidden hover:shadow-elegant transition-all duration-700 ${mapAnimation.className}`}
+               style={{...mapAnimation.style, animationDelay: '400ms'}}>
             <CardContent className="p-0">
               <div className="w-full h-96 bg-muted flex items-center justify-center">
                 <div className="text-center">
