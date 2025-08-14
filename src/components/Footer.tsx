@@ -100,7 +100,7 @@ const Footer = () => {
 
         <div className="border-t border-gold/20 mt-8 pt-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Asya Danışmanlık. Tüm hakları saklıdır.
+            © 2025 Asya Danışmanlık. Tüm hakları saklıdır.
           </p>
         </div>
       </div>
