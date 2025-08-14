@@ -29,7 +29,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Sol menü */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center justify-center space-x-8 min-w-[200px]">
             <Link
               to="/about"
               className={cn(
@@ -65,7 +65,7 @@ const Header = () => {
           </Link>
 
           {/* Sağ menü */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center justify-center space-x-8 min-w-[200px]">
             <Link
               to="/services"
               className={cn(
