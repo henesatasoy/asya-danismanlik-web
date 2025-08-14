@@ -48,13 +48,13 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
   return { elementRef, isVisible };
 };
 
-export const useStaggeredAnimation = (delay: number = 0) => {
+export const useStaggeredAnimation = (delay: number = 0, animationType: string = 'fade-in') => {
   const { elementRef, isVisible } = useScrollAnimation();
   
   return {
     elementRef,
     className: isVisible 
-      ? `animate-fade-in` 
+      ? `animate-${animationType}` 
       : 'opacity-0 translate-y-10',
     style: {
       animationDelay: isVisible ? `${delay}ms` : '0ms',
@@ -62,3 +62,12 @@ export const useStaggeredAnimation = (delay: number = 0) => {
     }
   };
 };
+
+// Farklı efekt türleri için yardımcı fonksiyonlar
+export const useSlideLeftAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'slide-left');
+export const useSlideRightAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'slide-right');
+export const useScaleInAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'scale-in');
+export const useRotateInAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'rotate-in');
+export const useZoomInAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'zoom-in');
+export const useFlipInAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'flip-in');
+export const useElasticAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'elastic');
