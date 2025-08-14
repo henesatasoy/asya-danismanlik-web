@@ -55,7 +55,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="py-8">
+    <div>
       {/* Hero Section */}
       <section className="bg-gradient-dark text-white py-20">
         <div className="container mx-auto px-6 text-center">
