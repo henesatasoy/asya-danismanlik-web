@@ -3,21 +3,53 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, TrendingUp, Users, Target, DollarSign, Building, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-bg.jpg';
+import FloatingParticles from '@/components/FloatingParticles';
+import { useMousePosition } from '@/hooks/useMousePosition';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
+  const mousePosition = useMousePosition();
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div>
+    <div className="relative">
+      <FloatingParticles />
       {/* Hero Section */}
       <section 
         className="relative h-[85vh] flex items-center justify-center text-center text-white overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(${heroImage})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: `center ${scrollY * 0.5}px`,
           backgroundAttachment: 'fixed',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/30"></div>
+        
+        {/* Interactive background elements */}
+        <div 
+          className="absolute w-96 h-96 bg-gold/10 rounded-full blur-3xl opacity-30 pointer-events-none"
+          style={{
+            left: `${mousePosition.x * 0.02}px`,
+            top: `${mousePosition.y * 0.02}px`,
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+        <div 
+          className="absolute w-64 h-64 bg-gold/5 rounded-full blur-2xl opacity-40 pointer-events-none"
+          style={{
+            left: `${mousePosition.x * -0.01 + 200}px`,
+            top: `${mousePosition.y * -0.01 + 100}px`,
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+        
         <div className="container mx-auto px-6 animate-fade-in relative z-10">
           <div className="mb-8">
             <img 
@@ -39,7 +71,15 @@ const Home = () => {
             asChild 
             variant="elegant"
             size="lg" 
-            className="px-12 py-4 text-lg font-semibold"
+            className="px-12 py-4 text-lg font-semibold group relative overflow-hidden"
+            onMouseEnter={(e) => {
+              const button = e.currentTarget;
+              const rect = button.getBoundingClientRect();
+              const x = mousePosition.x - rect.left;
+              const y = mousePosition.y - rect.top;
+              button.style.setProperty('--mouse-x', `${x}px`);
+              button.style.setProperty('--mouse-y', `${y}px`);
+            }}
           >
             <Link to="/services">
               Hizmetlerimizi Keşfedin
@@ -52,6 +92,17 @@ const Home = () => {
       {/* Services Preview Section */}
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        
+        {/* Interactive elements that follow mouse */}
+        <div 
+          className="absolute w-32 h-32 bg-gold/5 rounded-full blur-xl opacity-50 pointer-events-none transition-all duration-300"
+          style={{
+            left: `${mousePosition.x * 0.01}px`,
+            top: `${mousePosition.y * 0.01 + scrollY * 0.1}px`,
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+        
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20 animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 tracking-wide">
@@ -66,10 +117,11 @@ const Home = () => {
 
            <div className="grid md:grid-cols-3 gap-10">
             <Link to="/contact" className="block group">
-              <Card className="group hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden cursor-pointer">
+              <Card className="group hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden cursor-pointer transform-gpu">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-gold-light transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                <CardContent className="p-10 text-center">
-                  <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold/30 group-hover:to-gold/15 group-hover:shadow-glow transition-all duration-500 group-hover:rotate-3">
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/0 via-gold/0 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-10 text-center relative z-10">
+                  <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold/30 group-hover:to-gold/15 group-hover:shadow-glow transition-all duration-500 group-hover:rotate-3 transform-gpu">
                     <DollarSign className="w-10 h-10 text-gold group-hover:scale-125 transition-transform duration-500" />
                   </div>
                   <h3 className="text-2xl font-light text-gold mb-6 group-hover:font-normal transition-all duration-300">

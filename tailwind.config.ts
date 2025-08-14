@@ -149,6 +149,14 @@ export default {
 					'50%': {
 						boxShadow: '0 0 30px hsl(51, 100%, 50%, 0.6)'
 					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
@@ -158,7 +166,8 @@ export default {
 				'slide-up': 'slide-up 0.8s ease-out',
 				'scale-in': 'scale-in 0.4s ease-out',
 				'logo-float': 'logo-float 3s ease-in-out infinite',
-				'glow-pulse': 'glow-pulse 2s ease-in-out infinite'
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},
