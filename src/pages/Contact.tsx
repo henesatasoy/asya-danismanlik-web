@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +17,17 @@ const Contact = () => {
     message: ''
   });
   const { toast } = useToast();
+
+  // Scroll animations
+  const heroAnimation = useScrollAnimation();
+  const contactInfoAnimation = useScrollAnimation();
+  const formAnimation = useScrollAnimation();
+  const mapAnimation = useScrollAnimation();
+  
+  const addressCard = useStaggeredAnimation(100);
+  const phoneCard = useStaggeredAnimation(200);
+  const emailCard = useStaggeredAnimation(300);
+  const hoursCard = useStaggeredAnimation(400);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -44,12 +56,23 @@ const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-dark text-white py-20">
+      <section 
+        ref={heroAnimation.elementRef} 
+        className="bg-gradient-dark text-white py-20"
+      >
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
+          <h1 className={`text-5xl font-bold mb-6 transition-all duration-700 ${
+            heroAnimation.isVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-10'
+          }`}>
             İletişim
           </h1>
-          <p className="text-xl max-w-3xl mx-auto text-gray-200 animate-slide-up">
+          <p className={`text-xl max-w-3xl mx-auto text-gray-200 transition-all duration-700 delay-200 ${
+            heroAnimation.isVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-10'
+          }`}>
             Projeleriniz hakkında konuşmak ve size nasıl yardımcı olabileceğimizi 
             öğrenmek için bizimle iletişime geçin.
           </p>
@@ -62,13 +85,21 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-16">
             
             {/* İletişim Bilgileri */}
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8">
+            <div ref={contactInfoAnimation.elementRef}>
+              <h2 className={`text-3xl font-bold text-foreground mb-8 transition-all duration-700 ${
+                contactInfoAnimation.isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-10'
+              }`}>
                 İletişim Bilgileri
               </h2>
               
               <div className="space-y-6">
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card 
+                  ref={addressCard.elementRef}
+                  className={`hover:shadow-lg transition-all duration-700 ${addressCard.className}`}
+                  style={addressCard.style}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -85,7 +116,11 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card 
+                  ref={phoneCard.elementRef}
+                  className={`hover:shadow-lg transition-all duration-700 ${phoneCard.className}`}
+                  style={phoneCard.style}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -101,7 +136,11 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card 
+                  ref={emailCard.elementRef}
+                  className={`hover:shadow-lg transition-all duration-700 ${emailCard.className}`}
+                  style={emailCard.style}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -118,7 +157,11 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card 
+                  ref={hoursCard.elementRef}
+                  className={`hover:shadow-lg transition-all duration-700 ${hoursCard.className}`}
+                  style={hoursCard.style}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -139,12 +182,20 @@ const Contact = () => {
             </div>
 
             {/* İletişim Formu */}
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8">
+            <div ref={formAnimation.elementRef}>
+              <h2 className={`text-3xl font-bold text-foreground mb-8 transition-all duration-700 ${
+                formAnimation.isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-10'
+              }`}>
                 Bize Ulaşın
               </h2>
               
-              <Card className="hover:shadow-elegant transition-all duration-300">
+              <Card className={`hover:shadow-elegant transition-all duration-700 delay-200 ${
+                formAnimation.isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-10'
+              }`}>
                 <CardContent className="p-8">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
@@ -241,18 +292,33 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-secondary">
+      <section 
+        ref={mapAnimation.elementRef} 
+        className="py-20 bg-secondary"
+      >
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+            <h2 className={`text-4xl font-bold text-foreground mb-4 transition-all duration-700 ${
+              mapAnimation.isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-10'
+            }`}>
               Ofisimizi Ziyaret Edin
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className={`text-lg text-muted-foreground transition-all duration-700 delay-200 ${
+              mapAnimation.isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-10'
+            }`}>
               Bolu merkez lokasyonumuzda sizleri ağırlamaktan mutluluk duyarız.
             </p>
           </div>
           
-          <Card className="overflow-hidden hover:shadow-elegant transition-all duration-300">
+          <Card className={`overflow-hidden hover:shadow-elegant transition-all duration-700 delay-300 ${
+            mapAnimation.isVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-10'
+          }`}>
             <CardContent className="p-0">
               <div className="w-full h-96 bg-muted flex items-center justify-center">
                 <div className="text-center">
