@@ -188,6 +188,81 @@ export default {
 						borderRadius: 'var(--radius)',
 						opacity: '1',
 					}
+				},
+				'rainbow-glitch': {
+					'0%': { 
+						backgroundColor: 'hsl(0, 100%, 50%)',
+						color: 'hsl(180, 100%, 50%)',
+						filter: 'hue-rotate(0deg) saturate(2)'
+					},
+					'10%': { 
+						backgroundColor: 'hsl(36, 100%, 50%)',
+						color: 'hsl(216, 100%, 50%)',
+						filter: 'hue-rotate(36deg) saturate(2)'
+					},
+					'20%': { 
+						backgroundColor: 'hsl(72, 100%, 50%)',
+						color: 'hsl(252, 100%, 50%)',
+						filter: 'hue-rotate(72deg) saturate(2)'
+					},
+					'30%': { 
+						backgroundColor: 'hsl(108, 100%, 50%)',
+						color: 'hsl(288, 100%, 50%)',
+						filter: 'hue-rotate(108deg) saturate(2)'
+					},
+					'40%': { 
+						backgroundColor: 'hsl(144, 100%, 50%)',
+						color: 'hsl(324, 100%, 50%)',
+						filter: 'hue-rotate(144deg) saturate(2)'
+					},
+					'50%': { 
+						backgroundColor: 'hsl(180, 100%, 50%)',
+						color: 'hsl(0, 100%, 50%)',
+						filter: 'hue-rotate(180deg) saturate(2)'
+					},
+					'60%': { 
+						backgroundColor: 'hsl(216, 100%, 50%)',
+						color: 'hsl(36, 100%, 50%)',
+						filter: 'hue-rotate(216deg) saturate(2)'
+					},
+					'70%': { 
+						backgroundColor: 'hsl(252, 100%, 50%)',
+						color: 'hsl(72, 100%, 50%)',
+						filter: 'hue-rotate(252deg) saturate(2)'
+					},
+					'80%': { 
+						backgroundColor: 'hsl(288, 100%, 50%)',
+						color: 'hsl(108, 100%, 50%)',
+						filter: 'hue-rotate(288deg) saturate(2)'
+					},
+					'90%': { 
+						backgroundColor: 'hsl(324, 100%, 50%)',
+						color: 'hsl(144, 100%, 50%)',
+						filter: 'hue-rotate(324deg) saturate(2)'
+					},
+					'100%': { 
+						backgroundColor: 'hsl(360, 100%, 50%)',
+						color: 'hsl(180, 100%, 50%)',
+						filter: 'hue-rotate(360deg) saturate(2)'
+					}
+				},
+				'text-rainbow': {
+					'0%': { color: 'hsl(0, 100%, 60%)' },
+					'16.66%': { color: 'hsl(60, 100%, 60%)' },
+					'33.33%': { color: 'hsl(120, 100%, 60%)' },
+					'50%': { color: 'hsl(180, 100%, 60%)' },
+					'66.66%': { color: 'hsl(240, 100%, 60%)' },
+					'83.33%': { color: 'hsl(300, 100%, 60%)' },
+					'100%': { color: 'hsl(360, 100%, 60%)' }
+				},
+				'bg-rainbow': {
+					'0%': { backgroundColor: 'hsl(0, 80%, 20%)' },
+					'16.66%': { backgroundColor: 'hsl(60, 80%, 20%)' },
+					'33.33%': { backgroundColor: 'hsl(120, 80%, 20%)' },
+					'50%': { backgroundColor: 'hsl(180, 80%, 20%)' },
+					'66.66%': { backgroundColor: 'hsl(240, 80%, 20%)' },
+					'83.33%': { backgroundColor: 'hsl(300, 80%, 20%)' },
+					'100%': { backgroundColor: 'hsl(360, 80%, 20%)' }
 				}
 			},
 			animation: {
@@ -196,6 +271,9 @@ export default {
 				'matrix-enter': 'matrix-enter 2.5s cubic-bezier(0.23, 1, 0.32, 1)',
 				'glitch-crazy': 'glitch-crazy 0.5s ease-in-out',
 				'morph-wild': 'morph-wild 2s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'rainbow-glitch': 'rainbow-glitch 2s ease-in-out infinite',
+				'text-rainbow': 'text-rainbow 3s ease-in-out infinite',
+				'bg-rainbow': 'bg-rainbow 4s ease-in-out infinite',
 			}
 		}
 	},
