@@ -79,6 +79,7 @@ export default {
 			backgroundImage: {
 				'gradient-gold': 'var(--gradient-gold)',
 				'gradient-dark': 'var(--gradient-dark)',
+				'grid-pattern': 'var(--grid-pattern)',
 			},
 			boxShadow: {
 				'gold': 'var(--shadow-gold)',
