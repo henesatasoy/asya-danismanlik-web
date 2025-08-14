@@ -46,11 +46,11 @@ const Header = () => {
             <Link
               to="/about"
               className={cn(
-                "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wider font-sans",
-                isActive('/about') ? "text-gold font-semibold" : isScrolled ? "text-slate-700" : "text-slate-100 font-medium",
+                "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide font-sans",
+                isActive('/about') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium",
                 !isScrolled && "text-shadow-strong"
               )}
-              style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.9), 0px 0px 6px rgba(0,0,0,0.7)' } : {}}
+              style={!isScrolled ? { textShadow: '0px 1px 3px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.4)' } : {}}
             >
               Hakkımızda
               <span className="absolute left-0 -bottom-1 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -58,11 +58,11 @@ const Header = () => {
             <Link
               to="/services"
               className={cn(
-                "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wider font-sans",
-                isActive('/services') ? "text-gold font-semibold" : isScrolled ? "text-slate-700" : "text-slate-100 font-medium",
+                "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide font-sans",
+                isActive('/services') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium",
                 !isScrolled && "text-shadow-strong"
               )}
-              style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.9), 0px 0px 6px rgba(0,0,0,0.7)' } : {}}
+              style={!isScrolled ? { textShadow: '0px 1px 3px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.4)' } : {}}
             >
               Hizmetler
               <span className="absolute left-0 -bottom-1 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -70,11 +70,11 @@ const Header = () => {
             <Link
               to="/projects"
               className={cn(
-                "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wider font-sans",
-                isActive('/projects') ? "text-gold font-semibold" : isScrolled ? "text-slate-700" : "text-slate-100 font-medium",
+                "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide font-sans",
+                isActive('/projects') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium",
                 !isScrolled && "text-shadow-strong"
               )}
-              style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.9), 0px 0px 6px rgba(0,0,0,0.7)' } : {}}
+              style={!isScrolled ? { textShadow: '0px 1px 3px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.4)' } : {}}
             >
               Projeler
               <span className="absolute left-0 -bottom-1 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -82,11 +82,11 @@ const Header = () => {
             <Link
               to="/contact"
               className={cn(
-                "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wider font-sans",
-                isActive('/contact') ? "text-gold font-semibold" : isScrolled ? "text-slate-700" : "text-slate-100 font-medium",
+                "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide font-sans",
+                isActive('/contact') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium",
                 !isScrolled && "text-shadow-strong"
               )}
-              style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.9), 0px 0px 6px rgba(0,0,0,0.7)' } : {}}
+              style={!isScrolled ? { textShadow: '0px 1px 3px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.4)' } : {}}
             >
               İletişim
               <span className="absolute left-0 -bottom-1 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -101,11 +101,11 @@ const Header = () => {
             <Link
               to="/about"
               className={cn(
-                "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wider font-sans",
-                isActive('/about') ? "text-gold font-semibold" : isScrolled ? "text-slate-700" : "text-slate-100 font-medium",
+                "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide font-sans",
+                isActive('/about') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium",
                 !isScrolled && "text-shadow-strong"
               )}
-              style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.9), 0px 0px 6px rgba(0,0,0,0.7)' } : {}}
+              style={!isScrolled ? { textShadow: '0px 1px 3px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.4)' } : {}}
             >
               Hakkımızda
               <span className="absolute left-0 -bottom-2 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -113,11 +113,11 @@ const Header = () => {
             <Link
               to="/contact"
               className={cn(
-                "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wider font-sans",
-                isActive('/contact') ? "text-gold font-semibold" : isScrolled ? "text-slate-700" : "text-slate-100 font-medium",
+                "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide font-sans",
+                isActive('/contact') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium",
                 !isScrolled && "text-shadow-strong"
               )}
-              style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.9), 0px 0px 6px rgba(0,0,0,0.7)' } : {}}
+              style={!isScrolled ? { textShadow: '0px 1px 3px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.4)' } : {}}
             >
               İletişim
               <span className="absolute left-0 -bottom-2 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -143,11 +143,11 @@ const Header = () => {
             <Link
               to="/services"
               className={cn(
-                "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wider font-sans",
-                isActive('/services') ? "text-gold font-semibold" : isScrolled ? "text-slate-700" : "text-slate-100 font-medium",
+                "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide font-sans",
+                isActive('/services') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium",
                 !isScrolled && "text-shadow-strong"
               )}
-              style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.9), 0px 0px 6px rgba(0,0,0,0.7)' } : {}}
+              style={!isScrolled ? { textShadow: '0px 1px 3px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.4)' } : {}}
             >
               Hizmetlerimiz
               <span className="absolute left-0 -bottom-2 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -155,11 +155,11 @@ const Header = () => {
             <Link
               to="/projects"
               className={cn(
-                "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wider font-sans",
-                isActive('/projects') ? "text-gold font-semibold" : isScrolled ? "text-slate-700" : "text-slate-100 font-medium",
+                "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide font-sans",
+                isActive('/projects') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium",
                 !isScrolled && "text-shadow-strong"
               )}
-              style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.9), 0px 0px 6px rgba(0,0,0,0.7)' } : {}}
+              style={!isScrolled ? { textShadow: '0px 1px 3px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.4)' } : {}}
             >
               Projelerimiz
               <span className="absolute left-0 -bottom-2 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
