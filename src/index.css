@@ -55,6 +55,8 @@ All colors MUST be HSL.
     /* Shadows */
     --shadow-gold: 0 4px 20px hsl(51, 100%, 50%, 0.3);
     --shadow-elegant: 0 10px 40px hsl(0, 0%, 0%, 0.1);
+    --shadow-soft: 0 2px 8px hsl(0, 0%, 0%, 0.04);
+    --shadow-glow: 0 0 20px hsl(51, 100%, 50%, 0.4);
 
     --sidebar-background: 0 0% 98%;
 

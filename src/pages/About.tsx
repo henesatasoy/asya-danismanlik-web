@@ -21,9 +21,9 @@ const About = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12">
-            <Card className="hover:shadow-elegant transition-all duration-300">
+            <Card className="hover:shadow-glow transition-all duration-500 hover:-translate-y-2 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6 hover:shadow-glow hover:scale-110 transition-all duration-300">
                   <Target size={32} className="text-primary" />
                 </div>
                 <h2 className="text-3xl font-bold text-gold mb-4">Misyonumuz</h2>
@@ -36,9 +36,9 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-elegant transition-all duration-300">
+            <Card className="hover:shadow-glow transition-all duration-500 hover:-translate-y-2 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6 hover:shadow-glow hover:scale-110 transition-all duration-300">
                   <Globe size={32} className="text-primary" />
                 </div>
                 <h2 className="text-3xl font-bold text-gold mb-4">Vizyonumuz</h2>

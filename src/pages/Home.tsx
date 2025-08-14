@@ -21,7 +21,7 @@ const Home = () => {
             <img 
               src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
               alt="Asya Danışmanlık Logo" 
-              className="h-48 md:h-56 w-auto mx-auto mb-6 animate-scale-in"
+              className="h-48 md:h-56 w-auto mx-auto mb-6 animate-logo-float hover:animate-glow-pulse transition-all duration-500 cursor-pointer filter drop-shadow-lg hover:drop-shadow-2xl"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -35,8 +35,9 @@ const Home = () => {
           </p>
           <Button 
             asChild 
+            variant="elegant"
             size="lg" 
-            className="bg-gold hover:bg-gold-dark text-primary font-semibold px-8 py-3 shadow-gold"
+            className="px-12 py-4 text-lg font-semibold"
           >
             <Link to="/services">
               Hizmetlerimizi Keşfedin
@@ -59,11 +60,11 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
+           <div className="grid md:grid-cols-3 gap-8">
+            <Card className="group hover:shadow-glow transition-all duration-500 hover:-translate-y-3 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
-                  <DollarSign className="w-10 h-10 text-gold" />
+                <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center group-hover:bg-gold/30 group-hover:shadow-glow transition-all duration-500">
+                  <DollarSign className="w-10 h-10 text-gold group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gold mb-4">
                   Yatırım Teşvik
@@ -75,10 +76,10 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
+            <Card className="group hover:shadow-glow transition-all duration-500 hover:-translate-y-3 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
-                  <Building className="w-10 h-10 text-gold" />
+                <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center group-hover:bg-gold/30 group-hover:shadow-glow transition-all duration-500">
+                  <Building className="w-10 h-10 text-gold group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gold mb-4">
                   İş Geliştirme
@@ -90,10 +91,10 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
+            <Card className="group hover:shadow-glow transition-all duration-500 hover:-translate-y-3 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
-                  <Zap className="w-10 h-10 text-gold" />
+                <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center group-hover:bg-gold/30 group-hover:shadow-glow transition-all duration-500">
+                  <Zap className="w-10 h-10 text-gold group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gold mb-4">
                   Kapasite Geliştirme
@@ -111,11 +112,11 @@ const Home = () => {
               asChild 
               variant="outline" 
               size="lg"
-              className="border-gold text-gold hover:bg-gold hover:text-primary"
+              className="border-gold text-gold hover:bg-gold hover:text-primary group"
             >
               <Link to="/services">
                 Tüm Hizmetleri Görüntüle
-                <ArrowRight className="ml-2" size={18} />
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
               </Link>
             </Button>
           </div>

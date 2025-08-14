@@ -107,11 +107,11 @@ const Projects = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
+              <Card key={index} className="group hover:shadow-glow transition-all duration-500 hover:-translate-y-3 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mr-4`}>
-                      <project.icon size={24} className="text-gold" />
+                    <div className={`w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mr-4 group-hover:bg-gold/30 group-hover:shadow-glow transition-all duration-300`}>
+                      <project.icon size={24} className="text-gold group-hover:scale-110 transition-transform duration-300" />
                     </div>
                     <Badge variant="secondary" className="bg-gold/10 text-gold">
                       {project.category}

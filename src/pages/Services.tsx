@@ -56,9 +56,9 @@ const Services = () => {
               </ul>
             </div>
             <div className="order-1 md:order-2">
-              <Card className="hover:shadow-elegant transition-all duration-300">
+              <Card className="hover:shadow-glow transition-all duration-500 hover:-translate-y-3 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm">
                 <CardContent className="p-8">
-                  <div className="bg-gold/10 rounded-lg p-6 text-center">
+                  <div className="bg-gold/10 rounded-lg p-6 text-center hover:bg-gold/20 transition-all duration-300">
                     <h3 className="text-2xl font-bold text-gold mb-4">
                       500+ Başarılı Teşvik Projesi
                     </h3>
@@ -184,12 +184,13 @@ const Services = () => {
           </p>
           <Button 
             asChild 
+            variant="elegant"
             size="lg" 
-            className="bg-gold hover:bg-gold-dark text-primary font-semibold px-8 py-3 shadow-gold"
+            className="px-12 py-4 text-lg font-semibold group"
           >
             <Link to="/contact">
               Ücretsiz Danışmanlık
-              <ArrowRight className="ml-2" size={20} />
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={20} />
             </Link>
           </Button>
         </div>

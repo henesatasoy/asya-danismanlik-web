@@ -68,11 +68,11 @@ const Contact = () => {
               </h2>
               
               <div className="space-y-6">
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card className="hover:shadow-glow transition-all duration-500 hover:-translate-y-1 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm">
                   <CardContent className="p-6">
                     <div className="flex items-start">
-                      <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <MapPin className="text-gold" size={24} />
+                      <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 hover:bg-gold/30 hover:shadow-glow transition-all duration-300">
+                        <MapPin className="text-gold hover:scale-110 transition-transform duration-300" size={24} />
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Adres</h3>
@@ -226,10 +226,11 @@ const Contact = () => {
 
                     <Button 
                       type="submit" 
+                      variant="elegant"
                       size="lg" 
-                      className="w-full bg-gold hover:bg-gold-dark text-primary font-semibold shadow-gold"
+                      className="w-full text-lg font-semibold group"
                     >
-                      <Send className="mr-2" size={20} />
+                      <Send className="mr-2 group-hover:translate-x-1 transition-transform duration-300" size={20} />
                       Mesaj Gönder
                     </Button>
                   </form>
