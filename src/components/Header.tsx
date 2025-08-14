@@ -20,9 +20,9 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-16 md:h-24",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-16 md:h-24",
         isScrolled 
-          ? "bg-background/95 backdrop-blur-sm shadow-elegant" 
+          ? "bg-white/95 backdrop-blur-md shadow-soft border-b border-gold/10" 
           : "bg-transparent"
       )}
     >
@@ -32,52 +32,56 @@ const Header = () => {
           {/* Logo sol tarafta */}
           <Link
             to="/"
-            className="hover:opacity-80 transition-opacity duration-300"
+            className="group transition-all duration-300 hover:scale-105"
           >
             <img 
               src="/lovable-uploads/6ae3607a-1bff-42d6-8d71-5848a2c20a8f.png" 
               alt="Asya Danışmanlık Logo" 
-              className="h-12 w-auto"
+              className="h-12 w-auto filter drop-shadow-sm group-hover:drop-shadow-md transition-all duration-300"
             />
           </Link>
           
           {/* Mobil menü - yatay scroll */}
-          <div className="flex items-center space-x-4 overflow-x-auto scrollbar-hide">
+          <div className="flex items-center space-x-6 overflow-x-auto scrollbar-hide">
             <Link
               to="/about"
               className={cn(
-                "text-xs font-medium transition-colors duration-300 hover:text-gold whitespace-nowrap",
-                isActive('/about') ? "text-gold" : "text-foreground"
+                "text-xs font-light transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide",
+                isActive('/about') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
               )}
             >
               Hakkımızda
+              <span className="absolute left-0 -bottom-1 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               to="/services"
               className={cn(
-                "text-xs font-medium transition-colors duration-300 hover:text-gold whitespace-nowrap",
-                isActive('/services') ? "text-gold" : "text-foreground"
+                "text-xs font-light transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide",
+                isActive('/services') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
               )}
             >
               Hizmetler
+              <span className="absolute left-0 -bottom-1 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               to="/projects"
               className={cn(
-                "text-xs font-medium transition-colors duration-300 hover:text-gold whitespace-nowrap",
-                isActive('/projects') ? "text-gold" : "text-foreground"
+                "text-xs font-light transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide",
+                isActive('/projects') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
               )}
             >
               Projeler
+              <span className="absolute left-0 -bottom-1 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               to="/contact"
               className={cn(
-                "text-xs font-medium transition-colors duration-300 hover:text-gold whitespace-nowrap",
-                isActive('/contact') ? "text-gold" : "text-foreground"
+                "text-xs font-light transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide",
+                isActive('/contact') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
               )}
             >
               İletişim
+              <span className="absolute left-0 -bottom-1 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
         </div>
@@ -85,64 +89,64 @@ const Header = () => {
         {/* Desktop görünüm */}
         <div className="hidden md:grid w-full grid-cols-[1fr_auto_1fr] items-center">
           {/* Sol menü */}
-          <div className="flex items-center justify-start space-x-8">
+          <div className="flex items-center justify-start space-x-12">
             <Link
               to="/about"
               className={cn(
-                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group whitespace-nowrap",
-                isActive('/about') ? "text-gold" : "text-foreground"
+                "text-sm font-light transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide",
+                isActive('/about') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
               )}
             >
               Hakkımızda
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-2 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               to="/contact"
               className={cn(
-                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group whitespace-nowrap",
-                isActive('/contact') ? "text-gold" : "text-foreground"
+                "text-sm font-light transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide",
+                isActive('/contact') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
               )}
             >
               İletişim
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-2 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
 
           {/* Logo ortada */}
-          <div className="flex justify-center px-6">
+          <div className="flex justify-center px-8">
             <Link
               to="/"
-              className="hover:opacity-80 transition-opacity duration-300"
+              className="group transition-all duration-500 hover:scale-110"
             >
               <img 
                 src="/lovable-uploads/6ae3607a-1bff-42d6-8d71-5848a2c20a8f.png" 
                 alt="Asya Danışmanlık Logo" 
-                className="h-20 w-auto"
+                className="h-20 w-auto filter drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-500"
               />
             </Link>
           </div>
 
           {/* Sağ menü */}
-          <div className="flex items-center justify-end space-x-8">
+          <div className="flex items-center justify-end space-x-12">
             <Link
               to="/services"
               className={cn(
-                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group whitespace-nowrap",
-                isActive('/services') ? "text-gold" : "text-foreground"
+                "text-sm font-light transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide",
+                isActive('/services') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
               )}
             >
               Hizmetlerimiz
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-2 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               to="/projects"
               className={cn(
-                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group whitespace-nowrap",
-                isActive('/projects') ? "text-gold" : "text-foreground"
+                "text-sm font-light transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide",
+                isActive('/projects') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
               )}
             >
               Projelerimiz
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-2 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
         </div>
