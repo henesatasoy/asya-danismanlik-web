@@ -5,11 +5,19 @@ import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-bg.jpg';
 import FloatingParticles from '@/components/FloatingParticles';
 import { useMousePosition } from '@/hooks/useMousePosition';
+import { useInView } from '@/hooks/useInView';
 import { useEffect, useState } from 'react';
 
 const Home = () => {
   const mousePosition = useMousePosition();
   const [scrollY, setScrollY] = useState(0);
+  
+  // Section refs for animations
+  const servicesRef = useInView({ threshold: 0.1 });
+  const aboutRef = useInView({ threshold: 0.1 });
+  const projectsRef = useInView({ threshold: 0.1 });
+  const contactRef = useInView({ threshold: 0.1 });
+  const statsRef = useInView({ threshold: 0.1 });
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -89,9 +97,11 @@ const Home = () => {
       </section>
 
       {/* Services Preview Section */}
-      <section className="py-32 bg-white relative border-b border-gray-100">
+      <section ref={servicesRef.ref} className="py-32 bg-white relative border-b border-gray-100">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20 animate-fade-in">
+          <div className={`text-center mb-20 transition-all duration-1000 ${
+            servicesRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
               <span className="font-normal text-gold">Hizmet</span> Alanlarımız
             </h2>
@@ -103,7 +113,9 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
-            <Link to="/contact" className="block group animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <Link to="/contact" className={`block group transition-all duration-1000 delay-200 ${
+              servicesRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <Card className="h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden cursor-pointer">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 <CardContent className="p-12 text-center h-full flex flex-col">
@@ -121,7 +133,9 @@ const Home = () => {
               </Card>
             </Link>
 
-            <Link to="/contact" className="block group animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <Link to="/contact" className={`block group transition-all duration-1000 delay-300 ${
+              servicesRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <Card className="h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden cursor-pointer">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 <CardContent className="p-12 text-center h-full flex flex-col">
@@ -139,7 +153,9 @@ const Home = () => {
               </Card>
             </Link>
 
-            <Link to="/contact" className="block group animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <Link to="/contact" className={`block group transition-all duration-1000 delay-500 ${
+              servicesRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <Card className="h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden cursor-pointer">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 <CardContent className="p-12 text-center h-full flex flex-col">
@@ -158,7 +174,9 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="text-center mt-20 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className={`text-center mt-20 transition-all duration-1000 delay-700 ${
+            servicesRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
             <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
               <Button 
                 asChild 
@@ -189,10 +207,12 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-32 bg-gray-50 relative">
+      <section ref={aboutRef.ref} className="py-32 bg-gray-50 relative">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-20 animate-fade-in">
+            <div className={`text-center mb-20 transition-all duration-1000 ${
+              aboutRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
                 <span className="font-normal text-gold">Hakkımızda</span>
               </h2>
@@ -200,7 +220,9 @@ const Home = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-20 items-center">
-              <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className={`space-y-8 transition-all duration-1000 delay-200 ${
+                aboutRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}>
                 <h3 className="text-3xl font-light text-foreground mb-6 leading-tight">
                   10+ Yıllık Deneyim ile 
                   <span className="text-gold font-normal"> Güvenilir Ortağınız</span>
@@ -219,7 +241,9 @@ const Home = () => {
               </div>
               
               <div className="grid grid-cols-2 gap-8">
-                <div className="p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <div className={`p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-300 ${
+                  aboutRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`} style={{ transitionDelay: aboutRef.isInView ? '400ms' : '0ms' }}>
                   <div className="w-16 h-16 mx-auto mb-6 bg-gold/5 rounded-full flex items-center justify-center">
                     <Award className="w-8 h-8 text-gold" />
                   </div>
@@ -227,7 +251,9 @@ const Home = () => {
                   <p className="text-muted-foreground">Alanında deneyimli profesyoneller</p>
                 </div>
                 
-                <div className="p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                <div className={`p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-300 ${
+                  aboutRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`} style={{ transitionDelay: aboutRef.isInView ? '600ms' : '0ms' }}>
                   <div className="w-16 h-16 mx-auto mb-6 bg-gold/5 rounded-full flex items-center justify-center">
                     <Target className="w-8 h-8 text-gold" />
                   </div>
@@ -241,9 +267,11 @@ const Home = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-32 bg-white relative border-b border-gray-100">
+      <section ref={projectsRef.ref} className="py-32 bg-white relative border-b border-gray-100">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20 animate-fade-in">
+          <div className={`text-center mb-20 transition-all duration-1000 ${
+            projectsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
               <span className="font-normal text-gold">Projelerimiz</span>
             </h2>
@@ -254,7 +282,9 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto mb-16">
-            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className={`p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300 ${
+              projectsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: projectsRef.isInView ? '200ms' : '0ms' }}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <Briefcase className="w-10 h-10 text-gold" />
               </div>
@@ -264,7 +294,9 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className={`p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300 ${
+              projectsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: projectsRef.isInView ? '400ms' : '0ms' }}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <TrendingUp className="w-10 h-10 text-gold" />
               </div>
@@ -274,7 +306,9 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className={`p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300 ${
+              projectsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: projectsRef.isInView ? '600ms' : '0ms' }}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <Building className="w-10 h-10 text-gold" />
               </div>
@@ -285,7 +319,9 @@ const Home = () => {
             </div>
           </div>
           
-          <div className="text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className={`text-center transition-all duration-1000 delay-700 ${
+            projectsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
             <Button asChild variant="outline" className="border-gold text-gold hover:bg-gold hover:text-white rounded-sm px-6 py-3 font-medium">
               <Link to="/projects">
                 Tüm Projeleri Görüntüle
@@ -297,10 +333,12 @@ const Home = () => {
       </section>
 
       {/* Contact Preview Section */}
-      <section className="py-32 bg-gray-900 text-white relative">
+      <section ref={contactRef.ref} className="py-32 bg-gray-900 text-white relative">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="mb-20 animate-fade-in">
+            <div className={`mb-20 transition-all duration-1000 ${
+              contactRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-tight">
                 <span className="font-normal text-gold">İletişim</span>
               </h2>
@@ -312,7 +350,9 @@ const Home = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-12 mb-16">
-              <div className="text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className={`text-center transition-all duration-1000 delay-200 ${
+                contactRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}>
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20">
                   <Mail className="w-10 h-10 text-gold" />
                 </div>
@@ -320,7 +360,9 @@ const Home = () => {
                 <p className="text-white/70 text-lg">info@asyadanismanlik.com</p>
               </div>
               
-              <div className="text-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className={`text-center transition-all duration-1000 delay-300 ${
+                contactRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}>
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20">
                   <Building className="w-10 h-10 text-gold" />
                 </div>
@@ -328,7 +370,9 @@ const Home = () => {
                 <p className="text-white/70 text-lg">İstanbul / Türkiye</p>
               </div>
               
-              <div className="text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className={`text-center transition-all duration-1000 delay-500 ${
+                contactRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}>
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20">
                   <Users className="w-10 h-10 text-gold" />
                 </div>
@@ -337,7 +381,9 @@ const Home = () => {
               </div>
             </div>
             
-            <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className={`transition-all duration-1000 delay-700 ${
+              contactRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <Button asChild variant="elegant" size="lg" className="px-10 py-4 text-lg rounded-sm font-medium">
                 <Link to="/contact">
                   İletişime Geçin
@@ -350,10 +396,12 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-32 bg-black text-white relative">
+      <section ref={statsRef.ref} className="py-32 bg-black text-white relative">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-16 text-center max-w-5xl mx-auto">
-            <div className="group animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className={`group transition-all duration-1000 delay-200 ${
+              statsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
                 <TrendingUp size={32} className="text-gold" />
               </div>
@@ -361,7 +409,9 @@ const Home = () => {
               <p className="text-white/70 text-xl font-light tracking-wide">Başarılı Proje</p>
             </div>
             
-            <div className="group animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className={`group transition-all duration-1000 delay-300 ${
+              statsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
                 <Users size={32} className="text-gold" />
               </div>
@@ -369,7 +419,9 @@ const Home = () => {
               <p className="text-white/70 text-xl font-light tracking-wide">Mutlu Müşteri</p>
             </div>
             
-            <div className="group animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className={`group transition-all duration-1000 delay-500 ${
+              statsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
                 <Target size={32} className="text-gold" />
               </div>
