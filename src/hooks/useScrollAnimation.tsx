@@ -51,15 +51,18 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
 export const useCrazyAnimation = (delay: number = 0) => {
   const { elementRef, isVisible } = useScrollAnimation();
   
+  console.log('Crazy animation state:', { isVisible, delay });
+  
   return {
     elementRef,
     className: isVisible 
       ? 'animate-matrix-enter' 
-      : 'opacity-0',
+      : 'opacity-0 transform translate-y-10',
     style: {
       animationDelay: isVisible ? `${delay}ms` : '0ms',
       animationFillMode: 'both',
-      transformStyle: 'preserve-3d' as const
+      transformStyle: 'preserve-3d' as const,
+      transition: 'opacity 0.3s ease'
     }
   };
 };
@@ -67,15 +70,18 @@ export const useCrazyAnimation = (delay: number = 0) => {
 export const useGlitchAnimation = (delay: number = 0) => {
   const { elementRef, isVisible } = useScrollAnimation();
   
+  console.log('Glitch animation state:', { isVisible, delay });
+  
   return {
     elementRef,
     className: isVisible 
       ? 'animate-matrix-enter' 
-      : 'opacity-0',
+      : 'opacity-0 transform translate-y-10',
     glitchClass: isVisible ? 'animate-glitch-crazy' : '',
     style: {
       animationDelay: isVisible ? `${delay}ms` : '0ms',
-      animationFillMode: 'both'
+      animationFillMode: 'both',
+      transition: 'opacity 0.3s ease'
     }
   };
 };
@@ -83,14 +89,17 @@ export const useGlitchAnimation = (delay: number = 0) => {
 export const useMorphAnimation = (delay: number = 0) => {
   const { elementRef, isVisible } = useScrollAnimation();
   
+  console.log('Morph animation state:', { isVisible, delay });
+  
   return {
     elementRef,
     className: isVisible 
       ? 'animate-morph-wild' 
-      : 'opacity-0',
+      : 'opacity-0 transform translate-y-10',
     style: {
       animationDelay: isVisible ? `${delay}ms` : '0ms',
-      animationFillMode: 'both'
+      animationFillMode: 'both',
+      transition: 'opacity 0.3s ease'
     }
   };
 };

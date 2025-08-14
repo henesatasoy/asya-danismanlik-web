@@ -30,6 +30,13 @@ const Contact = () => {
   const emailCard = useCrazyAnimation(300);
   const hoursCard = useMorphAnimation(400);
 
+  // Debug için console.log ekleyelim
+  console.log('Animations loaded:', {
+    heroVisible: heroAnimation.className,
+    contactInfoVisible: contactInfoAnimation.className,
+    formVisible: formAnimation.className
+  });
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -56,6 +63,11 @@ const Contact = () => {
 
   return (
     <div>
+      {/* TEST ANİMASYONU - Bu direkt görünür olmalı */}
+      <div className="animate-matrix-enter bg-gold text-primary p-4 text-center font-bold">
+        🚀 TEST: Matrix animasyonu aktif olmalı!
+      </div>
+
       {/* Hero Section - 3D Matrix Effect */}
       <section 
         ref={heroAnimation.elementRef} 
