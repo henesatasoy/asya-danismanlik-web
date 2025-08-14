@@ -107,7 +107,7 @@ const Home = () => {
             </Card>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
             <Button 
               asChild 
               variant="outline" 
@@ -116,6 +116,18 @@ const Home = () => {
             >
               <Link to="/services">
                 Tüm Hizmetleri Görüntüle
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
+              </Link>
+            </Button>
+            
+            <Button 
+              asChild 
+              variant="elegant"
+              size="lg"
+              className="px-8 py-3 group"
+            >
+              <Link to="/contact">
+                İletişime Geçin
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
               </Link>
             </Button>
