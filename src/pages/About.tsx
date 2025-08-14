@@ -1,56 +1,71 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, Users, Target, Globe } from 'lucide-react';
+import { ScrollAnimatedSection, StaggeredContainer } from '@/components/ScrollAnimatedSection';
+import { ParallaxSection, FloatingElement, MagneticElement } from '@/components/ParallaxSection';
 
 const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-dark text-white py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            Hakkımızda
-          </h1>
-          <p className="text-xl max-w-3xl mx-auto text-gray-200 animate-slide-up">
-            10 yılı aşkın deneyimimizle, iş dünyasının dinamik yapısında 
-            şirketlere güvenilir danışmanlık hizmetleri sunuyoruz.
-          </p>
+      <ParallaxSection className="bg-gradient-dark text-white py-32 relative overflow-hidden" speed={0.2}>
+        <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent" />
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <ScrollAnimatedSection animation="zoom-in" delay={200}>
+            <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-gold bg-clip-text text-transparent">
+              Hakkımızda
+            </h1>
+          </ScrollAnimatedSection>
+          <ScrollAnimatedSection animation="slide-up" delay={600}>
+            <p className="text-2xl max-w-4xl mx-auto text-gray-200 leading-relaxed">
+              10 yılı aşkın deneyimimizle, iş dünyasının dinamik yapısında 
+              şirketlere güvenilir danışmanlık hizmetleri sunuyoruz.
+            </p>
+          </ScrollAnimatedSection>
         </div>
-      </section>
+      </ParallaxSection>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-secondary">
+      <section className="py-32 bg-secondary relative overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="hover:shadow-elegant transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
-                  <Target size={32} className="text-primary" />
-                </div>
-                <h2 className="text-3xl font-bold text-gold mb-4">Misyonumuz</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  İş dünyasının karmaşık süreçlerinde müşterilerimize rehberlik ederek, 
-                  onların hedeflerine ulaşmalarını sağlamak. Uzman kadromuz ve deneyimimiz 
-                  ile en uygun çözümleri sunarak, şirketlerin sürdürülebilir büyümesine 
-                  katkıda bulunmaktır.
-                </p>
-              </CardContent>
-            </Card>
+          <StaggeredContainer staggerDelay={300} animation="slide-left" className="grid md:grid-cols-2 gap-16">
+            <MagneticElement strength={0.1}>
+              <Card className="group hover:shadow-premium transition-all duration-500 hover:-translate-y-2 border-0 bg-gradient-to-br from-white to-gold/5">
+                <CardContent className="p-10">
+                  <FloatingElement intensity={10} duration={4}>
+                    <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center mb-8 shadow-glow group-hover:animate-glow-pulse">
+                      <Target size={40} className="text-primary" />
+                    </div>
+                  </FloatingElement>
+                  <h2 className="text-4xl font-bold text-gold mb-6 group-hover:scale-105 transition-transform duration-300">Misyonumuz</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    İş dünyasının karmaşık süreçlerinde müşterilerimize rehberlik ederek, 
+                    onların hedeflerine ulaşmalarını sağlamak. Uzman kadromuz ve deneyimimiz 
+                    ile en uygun çözümleri sunarak, şirketlerin sürdürülebilir büyümesine 
+                    katkıda bulunmaktır.
+                  </p>
+                </CardContent>
+              </Card>
+            </MagneticElement>
 
-            <Card className="hover:shadow-elegant transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
-                  <Globe size={32} className="text-primary" />
-                </div>
-                <h2 className="text-3xl font-bold text-gold mb-4">Vizyonumuz</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  Türkiye'nin önde gelen danışmanlık şirketlerinden biri olmak ve 
-                  uluslararası pazarlarda da tanınan bir marka haline gelmek. 
-                  İnovatif yaklaşımlarımız ve müşteri odaklı hizmet anlayışımızla 
-                  sektöre yön veren bir organizasyon olmaktır.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+            <MagneticElement strength={0.1}>
+              <Card className="group hover:shadow-premium transition-all duration-500 hover:-translate-y-2 border-0 bg-gradient-to-br from-white to-gold/5">
+                <CardContent className="p-10">
+                  <FloatingElement intensity={10} duration={4} delay={0.5}>
+                    <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center mb-8 shadow-glow group-hover:animate-glow-pulse">
+                      <Globe size={40} className="text-primary" />
+                    </div>
+                  </FloatingElement>
+                  <h2 className="text-4xl font-bold text-gold mb-6 group-hover:scale-105 transition-transform duration-300">Vizyonumuz</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    Türkiye'nin önde gelen danışmanlık şirketlerinden biri olmak ve 
+                    uluslararası pazarlarda da tanınan bir marka haline gelmek. 
+                    İnovatif yaklaşımlarımız ve müşteri odaklı hizmet anlayışımızla 
+                    sektöre yön veren bir organizasyon olmaktır.
+                  </p>
+                </CardContent>
+              </Card>
+            </MagneticElement>
+          </StaggeredContainer>
         </div>
       </section>
 
