@@ -58,7 +58,7 @@ const Header = () => {
             className="hover:opacity-80 transition-opacity duration-300"
           >
             <img 
-              src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
+              src="/lovable-uploads/6ae3607a-1bff-42d6-8d71-5848a2c20a8f.png" 
               alt="Asya Danışmanlık Logo" 
               className="h-16 w-auto"
             />
