@@ -26,12 +26,9 @@ const Home = () => {
               className="h-48 md:h-56 w-auto mx-auto mb-6 shadow-glow filter drop-shadow-lg hover:drop-shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl font-light mb-8 tracking-wide">
-            <span className="block text-white/90 text-2xl md:text-3xl font-light mb-2 tracking-wider">
+          <h1 className="text-4xl md:text-5xl font-light mb-8 tracking-wide">
+            <span className="block text-white/90 text-3xl md:text-4xl font-light mb-2 tracking-wider">
               Güvenilir İş Ortağınız
-            </span>
-            <span className="block bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent font-semibold">
-              ASYA DANIŞMANLIK
             </span>
           </h1>
           <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-white/80 leading-relaxed font-light">
