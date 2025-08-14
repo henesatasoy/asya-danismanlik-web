@@ -19,42 +19,45 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
-          {/* Menü linkler - mobilde ortada, desktop'ta solda */}
-          <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 mb-8 md:mb-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          {/* Sol taraf - Menü linkler */}
+          <div className="flex flex-col space-y-3 text-center md:text-left">
             <Link
               to="/"
-              className="text-sm hover:text-gold transition-colors duration-300 text-center md:text-left"
+              className="text-sm hover:text-gold transition-colors duration-300"
             >
               Ana Sayfa
             </Link>
             <Link
               to="/about"
-              className="text-sm hover:text-gold transition-colors duration-300 text-center md:text-left"
+              className="text-sm hover:text-gold transition-colors duration-300"
             >
               Hakkımızda
             </Link>
             <Link
               to="/contact"
-              className="text-sm hover:text-gold transition-colors duration-300 text-center md:text-left"
+              className="text-sm hover:text-gold transition-colors duration-300"
             >
               İletişim
             </Link>
             <Link
               to="/services"
-              className="text-sm hover:text-gold transition-colors duration-300 text-center md:text-left"
+              className="text-sm hover:text-gold transition-colors duration-300"
             >
               Hizmetlerimiz
             </Link>
             <Link
               to="/projects"
-              className="text-sm hover:text-gold transition-colors duration-300 text-center md:text-left"
+              className="text-sm hover:text-gold transition-colors duration-300"
             >
               Projelerimiz
             </Link>
           </div>
 
-          {/* Adres bilgisi ve sosyal medya sağda */}
+          {/* Orta - Boş alan (logo için) */}
+          <div></div>
+
+          {/* Sağ taraf - Adres ve sosyal medya */}
           <div className="text-center md:text-right">
             <div className="mb-4">
               <p className="text-sm text-muted-foreground mb-1">
