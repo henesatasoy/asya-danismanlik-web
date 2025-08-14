@@ -12,12 +12,12 @@ const Home = () => {
   const mousePosition = useMousePosition();
   const [scrollY, setScrollY] = useState(0);
   
-  // Section refs for animations - threshold %35'e ayarlandı
-  const servicesRef = useInView({ threshold: 0.35, rootMargin: '-100px' });
-  const aboutRef = useInView({ threshold: 0.35, rootMargin: '-100px' });
-  const projectsRef = useInView({ threshold: 0.35, rootMargin: '-100px' });
-  const contactRef = useInView({ threshold: 0.35, rootMargin: '-100px' });
-  const statsRef = useInView({ threshold: 0.35, rootMargin: '-100px' });
+  // Section refs for animations - threshold %35, root margin -50px
+  const servicesRef = useInView({ threshold: 0.35, rootMargin: '-50px' });
+  const aboutRef = useInView({ threshold: 0.35, rootMargin: '-50px' });
+  const projectsRef = useInView({ threshold: 0.35, rootMargin: '-50px' });
+  const contactRef = useInView({ threshold: 0.35, rootMargin: '-50px' });
+  const statsRef = useInView({ threshold: 0.35, rootMargin: '-50px' });
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
