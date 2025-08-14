@@ -248,7 +248,7 @@ const Contact = () => {
               Ofisimizi Ziyaret Edin
             </h2>
             <p className="text-lg text-muted-foreground">
-              Kadıköy merkez lokasyonumuzda sizleri ağırlamaktan mutluluk duyarız.
+              Bolu merkez lokasyonumuzda sizleri ağırlamaktan mutluluk duyarız.
             </p>
           </div>
           
