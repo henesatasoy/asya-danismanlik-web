@@ -45,7 +45,7 @@ const Home = () => {
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/30 py-0"></div>
         
         {/* Interactive background elements */}
         <div className="absolute w-96 h-96 bg-gold/10 rounded-full blur-3xl opacity-30 pointer-events-none" style={{
@@ -89,7 +89,7 @@ const Home = () => {
       </section>
 
       {/* Services Preview Section */}
-      <section ref={servicesRef.ref} className="py-32 bg-white relative border-b border-gray-100">
+      <section ref={servicesRef.ref} className="bg-white relative border-b border-gray-100 py-[50px]">
         <div className="container mx-auto px-6">
           <div className={`text-center mb-20 transition-all duration-1000 ${servicesRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
@@ -179,7 +179,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section ref={aboutRef.ref} className="py-32 bg-gray-50 relative">
+      <section ref={aboutRef.ref} className="bg-gray-50 relative py-[50px]">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className={`text-center mb-20 transition-all duration-1000 ${aboutRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -235,7 +235,7 @@ const Home = () => {
       </section>
 
       {/* Projects Section */}
-      <section ref={projectsRef.ref} className="py-32 bg-white relative border-b border-gray-100">
+      <section ref={projectsRef.ref} className="bg-white relative border-b border-gray-100 py-[50px]">
         <div className="container mx-auto px-6">
           <div className={`text-center mb-20 transition-all duration-1000 ${projectsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
@@ -297,7 +297,7 @@ const Home = () => {
       </section>
 
       {/* Contact Preview Section */}
-      <section ref={contactRef.ref} className="py-32 bg-gray-900 text-white relative">
+      <section ref={contactRef.ref} className="bg-gray-900 text-white relative py-[50px]">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             <div className={`mb-20 transition-all duration-1000 ${contactRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -350,7 +350,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section ref={statsRef.ref} className="py-32 bg-black text-white relative">
+      <section ref={statsRef.ref} className="bg-black text-white relative py-[50px]">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-16 text-center max-w-5xl mx-auto">
             <div className={`group transition-all duration-1000 delay-200 ${statsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
