@@ -65,53 +65,59 @@ const Home = () => {
           </div>
 
            <div className="grid md:grid-cols-3 gap-10">
-            <Card className="group hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-gold-light transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              <CardContent className="p-10 text-center">
-                <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold/30 group-hover:to-gold/15 group-hover:shadow-glow transition-all duration-500 group-hover:rotate-3">
-                  <DollarSign className="w-10 h-10 text-gold group-hover:scale-125 transition-transform duration-500" />
-                </div>
-                <h3 className="text-2xl font-light text-gold mb-6 group-hover:font-normal transition-all duration-300">
-                  Yatırım Teşvik
-                </h3>
-                <p className="text-muted-foreground leading-relaxed font-light text-sm">
-                  Devlet teşviklerinden maksimum faydayı sağlayacak stratejiler geliştiriyoruz. 
-                  Yatırım projelerinizin her aşamasında yanınızdayız.
-                </p>
-              </CardContent>
-            </Card>
+            <Link to="/contact" className="block group">
+              <Card className="group hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden cursor-pointer">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-gold-light transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                <CardContent className="p-10 text-center">
+                  <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold/30 group-hover:to-gold/15 group-hover:shadow-glow transition-all duration-500 group-hover:rotate-3">
+                    <DollarSign className="w-10 h-10 text-gold group-hover:scale-125 transition-transform duration-500" />
+                  </div>
+                  <h3 className="text-2xl font-light text-gold mb-6 group-hover:font-normal transition-all duration-300">
+                    Yatırım Teşvik
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed font-light text-sm">
+                    Devlet teşviklerinden maksimum faydayı sağlayacak stratejiler geliştiriyoruz. 
+                    Yatırım projelerinizin her aşamasında yanınızdayız.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="group hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-gold-light transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              <CardContent className="p-10 text-center">
-                <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold/30 group-hover:to-gold/15 group-hover:shadow-glow transition-all duration-500 group-hover:rotate-3">
-                  <Building className="w-10 h-10 text-gold group-hover:scale-125 transition-transform duration-500" />
-                </div>
-                <h3 className="text-2xl font-light text-gold mb-6 group-hover:font-normal transition-all duration-300">
-                  İş Geliştirme
-                </h3>
-                <p className="text-muted-foreground leading-relaxed font-light text-sm">
-                  İşletmenizin büyüme potansiyelini keşfediyor, yeni pazarlara açılmanızı 
-                  ve rekabet gücünüzü artırmanızı sağlıyoruz.
-                </p>
-              </CardContent>
-            </Card>
+            <Link to="/contact" className="block group">
+              <Card className="group hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden cursor-pointer">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-gold-light transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                <CardContent className="p-10 text-center">
+                  <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold/30 group-hover:to-gold/15 group-hover:shadow-glow transition-all duration-500 group-hover:rotate-3">
+                    <Building className="w-10 h-10 text-gold group-hover:scale-125 transition-transform duration-500" />
+                  </div>
+                  <h3 className="text-2xl font-light text-gold mb-6 group-hover:font-normal transition-all duration-300">
+                    İş Geliştirme
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed font-light text-sm">
+                    İşletmenizin büyüme potansiyelini keşfediyor, yeni pazarlara açılmanızı 
+                    ve rekabet gücünüzü artırmanızı sağlıyoruz.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="group hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-gold-light transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              <CardContent className="p-10 text-center">
-                <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold/30 group-hover:to-gold/15 group-hover:shadow-glow transition-all duration-500 group-hover:rotate-3">
-                  <Zap className="w-10 h-10 text-gold group-hover:scale-125 transition-transform duration-500" />
-                </div>
-                <h3 className="text-2xl font-light text-gold mb-6 group-hover:font-normal transition-all duration-300">
-                  Kapasite Geliştirme
-                </h3>
-                <p className="text-muted-foreground leading-relaxed font-light text-sm">
-                  İnsan kaynakları ve operasyonel süreçlerinizi optimize ediyor, 
-                  organizasyonunuzun kapasitesini artırıyoruz.
-                </p>
-              </CardContent>
-            </Card>
+            <Link to="/contact" className="block group">
+              <Card className="group hover:shadow-glow transition-all duration-700 hover:-translate-y-4 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm relative overflow-hidden cursor-pointer">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-gold-light transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                <CardContent className="p-10 text-center">
+                  <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-gold/30 group-hover:to-gold/15 group-hover:shadow-glow transition-all duration-500 group-hover:rotate-3">
+                    <Zap className="w-10 h-10 text-gold group-hover:scale-125 transition-transform duration-500" />
+                  </div>
+                  <h3 className="text-2xl font-light text-gold mb-6 group-hover:font-normal transition-all duration-300">
+                    Kapasite Geliştirme
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed font-light text-sm">
+                    İnsan kaynakları ve operasyonel süreçlerinizi optimize ediyor, 
+                    organizasyonunuzun kapasitesini artırıyoruz.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
 
           <div className="text-center mt-16 space-y-6 md:space-y-0 md:space-x-6 md:flex md:justify-center">
