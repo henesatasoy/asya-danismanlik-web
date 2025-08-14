@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, X } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -105,7 +105,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-gold hover:text-primary transition-all duration-500 flex items-center justify-center group hover:scale-110 hover:shadow-glow"
               >
-                <X size={16} className="group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-bold group-hover:scale-110 transition-transform duration-300">𝕏</span>
               </a>
               <a
                 href="https://linkedin.com"
