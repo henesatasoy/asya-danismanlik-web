@@ -27,9 +27,9 @@ const Header = () => {
       )}
     >
       <nav className="container mx-auto px-6 h-full flex items-center">
-        <div className="flex items-center">
+        <div className="w-full grid grid-cols-3 items-center">
           {/* Sol menü */}
-          <div className="flex items-center justify-start space-x-8 flex-1">
+          <div className="flex items-center justify-start space-x-8">
             <Link
               to="/about"
               className={cn(
@@ -53,7 +53,7 @@ const Header = () => {
           </div>
 
           {/* Logo ortada */}
-          <div className="flex-shrink-0">
+          <div className="flex justify-center">
             <Link
               to="/"
               className="hover:opacity-80 transition-opacity duration-300"
@@ -61,13 +61,13 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/6ae3607a-1bff-42d6-8d71-5848a2c20a8f.png" 
                 alt="Asya Danışmanlık Logo" 
-                className="h-24 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
           </div>
 
           {/* Sağ menü */}
-          <div className="flex items-center justify-end space-x-8 flex-1">
+          <div className="flex items-center justify-end space-x-8">
             <Link
               to="/services"
               className={cn(
