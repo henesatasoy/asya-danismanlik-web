@@ -58,10 +58,10 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <div className="mb-4">
               <p className="text-sm text-muted-foreground mb-1">
-                Atatürk Mahallesi, İş Merkezi Sok. No:12
+                İhsaniye Mahallesi, Çeşmeli Sok. No: 11/1
               </p>
               <p className="text-sm text-muted-foreground mb-1">
-                Kadıköy, İstanbul 34716
+                Merkez, Bolu 14200
               </p>
               <p className="text-sm text-muted-foreground">
                 +90 (216) 555 01 23

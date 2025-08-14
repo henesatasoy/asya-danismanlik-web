@@ -77,8 +77,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Adres</h3>
                         <p className="text-muted-foreground">
-                          Atatürk Mahallesi, İş Merkezi Sok. No:12<br />
-                          Kadıköy, İstanbul 34716
+                          İhsaniye Mahallesi, Çeşmeli Sok. No: 11/1<br />
+                          Merkez, Bolu 14200
                         </p>
                       </div>
                     </div>
@@ -262,8 +262,8 @@ const Contact = () => {
                     Harita Entegrasyonu
                   </h3>
                   <p className="text-muted-foreground">
-                    Atatürk Mahallesi, İş Merkezi Sok. No:12<br />
-                    Kadıköy, İstanbul 34716
+                    İhsaniye Mahallesi, Çeşmeli Sok. No: 11/1<br />
+                    Merkez, Bolu 14200
                   </p>
                 </div>
               </div>
