@@ -63,7 +63,7 @@ const Services = () => {
                       500+ Başarılı Teşvik Projesi
                     </h3>
                     <p className="text-muted-foreground">
-                      15 yıllık deneyimimizle yüzlerce şirkete teşvik süreçlerinde 
+                      10 yıllık deneyimimizle yüzlerce şirkete teşvik süreçlerinde 
                       rehberlik ettik ve milyonlarca liralık tasarruf sağladık.
                     </p>
                   </div>
