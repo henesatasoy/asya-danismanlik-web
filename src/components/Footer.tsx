@@ -57,13 +57,44 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Desktop simetrik düzen */}
-          <div className="hidden md:grid w-full grid-cols-3 items-start gap-8">
-            {/* Sol boş alan - hizalama için */}
-            <div></div>
+          {/* Desktop düzen - logo ortada, menü sol tarafta alt alta */}
+          <div className="hidden md:flex w-full justify-between items-start">
+            {/* Sol tarafta menü linkler alt alta */}
+            <div className="flex flex-col space-y-4">
+              <Link
+                to="/"
+                className="text-sm hover:text-gold transition-colors duration-300"
+              >
+                Ana Sayfa
+              </Link>
+              <Link
+                to="/about"
+                className="text-sm hover:text-gold transition-colors duration-300"
+              >
+                Hakkımızda
+              </Link>
+              <Link
+                to="/contact"
+                className="text-sm hover:text-gold transition-colors duration-300"
+              >
+                İletişim
+              </Link>
+              <Link
+                to="/services"
+                className="text-sm hover:text-gold transition-colors duration-300"
+              >
+                Hizmetlerimiz
+              </Link>
+              <Link
+                to="/projects"
+                className="text-sm hover:text-gold transition-colors duration-300"
+              >
+                Projelerimiz
+              </Link>
+            </div>
             
-            {/* Logo ortada */}
-            <div className="flex justify-center">
+            {/* Logo tam ortada */}
+            <div className="flex justify-center flex-1">
               <Link
                 to="/"
                 className="hover:opacity-80 transition-opacity duration-300"
@@ -76,8 +107,8 @@ const Footer = () => {
               </Link>
             </div>
 
-            {/* Sağ boş alan - hizalama için */}
-            <div></div>
+            {/* Sağ tarafta boş alan - hizalama için */}
+            <div className="w-40"></div>
           </div>
 
           {/* Adres bilgisi ve sosyal medya sağda */}
