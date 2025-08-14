@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
           {/* Mobilde logo ve menü yan yana */}
-          <div className="flex flex-row md:flex-col justify-between items-start md:items-start w-full md:w-auto mb-8 md:mb-0">
+          <div className="flex flex-row md:flex-col justify-between items-center md:items-start w-full md:w-auto mb-8 md:mb-0">
             {/* Hızlı menü - mobilde sol tarafta, desktop'ta normal */}
             <div className="flex flex-col items-start space-y-3 md:space-y-0 md:flex-row md:space-x-8">
               <Link
@@ -42,8 +42,8 @@ const Footer = () => {
               </Link>
             </div>
 
-            {/* Logo - mobilde sağ tarafta, desktop'ta üstte */}
-            <div className="md:hidden">
+            {/* Logo - mobilde ortada ve büyük, desktop'ta üstte */}
+            <div className="md:hidden flex items-center">
               <Link
                 to="/"
                 className="hover:opacity-80 transition-opacity duration-300"
@@ -51,7 +51,7 @@ const Footer = () => {
                 <img 
                   src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
                   alt="Asya Danışmanlık Logo" 
-                  className="h-16 w-auto"
+                  className="h-20 w-auto"
                 />
               </Link>
             </div>
