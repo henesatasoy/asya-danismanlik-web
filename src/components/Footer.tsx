@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left">
-          {/* Logo sol tarafta */}
-          <div className="mb-8 md:mb-0">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
+          {/* Logo - mobilde ortada, desktop'ta solda */}
+          <div className="mb-8 md:mb-0 text-center md:text-left">
             <Link
               to="/"
               className="hover:opacity-80 transition-opacity duration-300"
@@ -20,8 +20,8 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Hızlı menü ortada */}
-          <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 mb-8 md:mb-0">
+          {/* Hızlı menü - mobilde sola alt alta, desktop'ta ortada */}
+          <div className="flex flex-col items-start md:items-center space-y-3 md:space-y-0 md:flex-row md:space-x-8 mb-8 md:mb-0 w-full md:w-auto">
             <Link
               to="/"
               className="text-sm hover:text-gold transition-colors duration-300"
