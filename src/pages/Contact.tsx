@@ -19,19 +19,19 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  // ÇOK ÇILGIN ANIMASYONLAR!
+  // Professional & Elegant Animations
   const heroAnimation = useCrazyAnimation();
   const contactInfoAnimation = useGlitchAnimation();
   const formAnimation = useMorphAnimation();
   const mapAnimation = useCrazyAnimation(800);
   
-  // Her kart için çılgın efektler
+  // Sophisticated card animations with staggered timing
   const addressCard = useMorphAnimation(100);
   const phoneCard = useGlitchAnimation(200);
   const emailCard = useCrazyAnimation(300);
   const hoursCard = useMorphAnimation(400);
 
-  // SHITPOST TEXT HOOKS 🔥
+  // Professional text variations
   const heroText = useGlitchText("İletişim", "title");
   const heroDesc = useGlitchText("Projeleriniz hakkında konuşmak ve size nasıl yardımcı olabileceğimizi öğrenmek için bizimle iletişime geçin.", "description");
   const contactInfoText = useGlitchText("İletişim Bilgileri", "contact");
@@ -62,33 +62,32 @@ const Contact = () => {
   };
 
   return (
-    <div className="animate-bg-rainbow">
-      {/* Hero Section - 3D Matrix Effect + GLITCH COLORS */}
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/30">
+      {/* Elegant Hero Section */}
       <section 
-        ref={heroAnimation.elementRef} 
-        className="animate-rainbow-glitch text-white py-20 overflow-hidden"
-        style={{ perspective: '1000px' }}
+        ref={heroAnimation.elementRef}
+        className={`relative py-24 px-4 text-center ${heroAnimation.className}`}
+        style={heroAnimation.style}
       >
-        <div className="container mx-auto px-6 text-center">
-          <h1 className={`text-5xl font-bold mb-6 animate-text-rainbow ${heroAnimation.className}`}
-              style={heroAnimation.style}>
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
             {heroText}
           </h1>
-          <p className={`text-xl max-w-3xl mx-auto animate-text-rainbow ${heroAnimation.className}`}
-             style={{...heroAnimation.style, animationDelay: '500ms'}}>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {heroDesc}
           </p>
         </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none"></div>
       </section>
 
-      {/* Contact Info & Form - RAINBOW BACKGROUND */}
-      <section className="py-20 animate-bg-rainbow">
+      {/* Professional Contact Information Section */}
+      <section className="py-20 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             
-            {/* İletişim Bilgileri - Glitch Effect */}
+            {/* Contact Information */}
             <div ref={contactInfoAnimation.elementRef}>
-              <h2 className={`text-3xl font-bold mb-8 animate-text-rainbow ${contactInfoAnimation.className} ${contactInfoAnimation.glitchClass}`}
+              <h2 className={`text-3xl font-bold mb-8 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent ${contactInfoAnimation.className}`}
                   style={contactInfoAnimation.style}>
                 {contactInfoText}
               </h2>
@@ -117,7 +116,7 @@ const Contact = () => {
 
                 <Card 
                   ref={phoneCard.elementRef}
-                  className={`hover:shadow-lg transition-all duration-700 ${phoneCard.className} ${phoneCard.glitchClass}`}
+                  className={`hover:shadow-lg transition-all duration-700 ${phoneCard.className}`}
                   style={phoneCard.style}
                 >
                   <CardContent className="p-6">
@@ -180,9 +179,9 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* İletişim Formu - Morphing Effect + RAINBOW */}
+            {/* Professional Contact Form */}
             <div ref={formAnimation.elementRef}>
-              <h2 className={`text-3xl font-bold mb-8 animate-text-rainbow ${formAnimation.className}`}
+              <h2 className={`text-3xl font-bold mb-8 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent ${formAnimation.className}`}
                   style={formAnimation.style}>
                 {formText}
               </h2>
@@ -284,18 +283,18 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section - FULL RAINBOW GLITCH */}
+      {/* Professional Map Section */}
       <section 
         ref={mapAnimation.elementRef} 
-        className="py-20 animate-rainbow-glitch"
+        className="py-20 bg-gradient-to-t from-background to-muted/20"
       >
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className={`text-4xl font-bold mb-4 animate-text-rainbow ${mapAnimation.className}`}
+            <h2 className={`text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent ${mapAnimation.className}`}
                 style={mapAnimation.style}>
               Ofisimizi Ziyaret Edin
             </h2>
-            <p className={`text-lg animate-text-rainbow ${mapAnimation.className}`}
+            <p className={`text-lg text-muted-foreground ${mapAnimation.className}`}
                style={{...mapAnimation.style, animationDelay: '1000ms'}}>
               Bolu merkez lokasyonumuzda sizleri ağırlamaktan mutluluk duyarız.
             </p>
