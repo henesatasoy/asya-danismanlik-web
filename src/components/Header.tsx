@@ -55,9 +55,13 @@ const Header = () => {
           {/* Logo ortada */}
           <Link
             to="/"
-            className="text-2xl font-bold text-foreground hover:text-gold transition-colors duration-300"
+            className="hover:opacity-80 transition-opacity duration-300"
           >
-            Asya Danışmanlık
+            <img 
+              src="/lovable-uploads/833b85de-a743-435b-9409-48d1da99f7fe.png" 
+              alt="Asya Danışmanlık Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Sağ menü */}
