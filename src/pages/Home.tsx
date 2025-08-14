@@ -21,7 +21,7 @@ const Home = () => {
             <img 
               src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
               alt="Asya Danışmanlık Logo" 
-              className="h-48 md:h-56 w-auto mx-auto mb-6 animate-logo-float hover:animate-glow-pulse transition-all duration-500 cursor-pointer filter drop-shadow-lg hover:drop-shadow-2xl"
+              className="h-48 md:h-56 w-auto mx-auto mb-6 animate-glow-pulse filter drop-shadow-lg hover:drop-shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
