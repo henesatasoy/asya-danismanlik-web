@@ -5,20 +5,6 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 py-12">
-        {/* Logo tam ortada */}
-        <div className="flex justify-center mb-8">
-          <Link
-            to="/"
-            className="hover:opacity-80 transition-opacity duration-300"
-          >
-            <img 
-              src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
-              alt="Asya Danışmanlık Logo" 
-              className="h-32 md:h-36 w-auto"
-            />
-          </Link>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {/* Sol taraf - Menü linkler */}
           <div className="flex flex-col space-y-3 text-center md:text-left">
@@ -54,8 +40,19 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Orta - Boş alan (logo için) */}
-          <div></div>
+          {/* Orta - Logo */}
+          <div className="flex justify-center items-start">
+            <Link
+              to="/"
+              className="hover:opacity-80 transition-opacity duration-300"
+            >
+              <img 
+                src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
+                alt="Asya Danışmanlık Logo" 
+                className="h-32 md:h-36 w-auto"
+              />
+            </Link>
+          </div>
 
           {/* Sağ taraf - Adres ve sosyal medya */}
           <div className="text-center md:text-right">
