@@ -9,10 +9,10 @@ const Footer = () => {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold/3 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-6 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
           
           {/* Navigation Links */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left flex flex-col justify-center h-full">
             <div className="space-y-3">
               <Link
                 to="/"
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           {/* Logo */}
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center py-4">
             <Link
               to="/"
               className="group transition-all duration-500 hover:scale-105"
@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
 
           {/* Contact & Social */}
-          <div className="text-center md:text-right">
+          <div className="text-center md:text-right flex flex-col justify-center h-full">
             <div className="space-y-2 mb-6">
               <p className="text-white/70 font-light text-sm leading-relaxed">
                 İhsaniye Mahallesi<br />
