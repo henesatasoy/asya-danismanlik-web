@@ -89,7 +89,7 @@ const Home = () => {
       </section>
 
       {/* Services Preview Section */}
-      <section ref={servicesRef.ref} className="bg-white relative border-b border-gray-100 py-[50px]">
+      <section ref={servicesRef.ref} className="bg-white relative border-b border-gray-100 py-20">
         <div className="container mx-auto px-6">
           <div className={`text-center mb-20 transition-all duration-1000 ${servicesRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
@@ -179,7 +179,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section ref={aboutRef.ref} className="bg-gray-50 relative py-[50px]">
+      <section ref={aboutRef.ref} className="bg-gray-50 relative py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className={`text-center mb-20 transition-all duration-1000 ${aboutRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -235,7 +235,7 @@ const Home = () => {
       </section>
 
       {/* Projects Section */}
-      <section ref={projectsRef.ref} className="bg-white relative border-b border-gray-100 py-[50px]">
+      <section ref={projectsRef.ref} className="bg-white relative border-b border-gray-100 py-20">
         <div className="container mx-auto px-6">
           <div className={`text-center mb-20 transition-all duration-1000 ${projectsRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
@@ -297,7 +297,7 @@ const Home = () => {
       </section>
 
       {/* Contact Preview Section */}
-      <section ref={contactRef.ref} className="bg-gray-900 text-white relative py-[50px]">
+      <section ref={contactRef.ref} className="bg-gray-900 text-white relative py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             <div className={`mb-20 transition-all duration-1000 ${contactRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>

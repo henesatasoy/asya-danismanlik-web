@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white py-24 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
@@ -22,7 +22,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-16">
@@ -62,7 +62,7 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 tracking-wide">
@@ -119,7 +119,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20 animate-slide-up">
