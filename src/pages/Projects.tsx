@@ -1,8 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Building, Factory, Truck, Heart, Zap, ShoppingCart } from 'lucide-react';
-import { ScrollAnimatedSection, StaggeredContainer } from '@/components/ScrollAnimatedSection';
-import { ParallaxSection, FloatingElement, MagneticElement } from '@/components/ParallaxSection';
 
 const Projects = () => {
   const projects = [

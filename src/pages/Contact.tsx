@@ -6,6 +6,8 @@ import { Label } from '@/components/ui/label';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { useCrazyAnimation, useGlitchAnimation, useMorphAnimation } from '@/hooks/useScrollAnimation';
+import { useGlitchText } from '@/hooks/useGlitchText';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +18,24 @@ const Contact = () => {
     message: ''
   });
   const { toast } = useToast();
+
+  // Professional & Elegant Animations
+  const heroAnimation = useCrazyAnimation();
+  const contactInfoAnimation = useGlitchAnimation();
+  const formAnimation = useMorphAnimation();
+  const mapAnimation = useCrazyAnimation(800);
+  
+  // Sophisticated card animations with staggered timing
+  const addressCard = useMorphAnimation(100);
+  const phoneCard = useGlitchAnimation(200);
+  const emailCard = useCrazyAnimation(300);
+  const hoursCard = useMorphAnimation(400);
+
+  // Professional text variations
+  const heroText = useGlitchText("İletişim", "title");
+  const heroDesc = useGlitchText("Projeleriniz hakkında konuşmak ve size nasıl yardımcı olabileceğimizi öğrenmek için bizimle iletişime geçin.", "description");
+  const contactInfoText = useGlitchText("İletişim Bilgileri", "contact");
+  const formText = useGlitchText("Bize Ulaşın", "form");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -42,33 +62,42 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-dark text-white py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            İletişim
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/30">
+      {/* Elegant Hero Section */}
+      <section 
+        ref={heroAnimation.elementRef}
+        className={`relative py-24 px-4 text-center ${heroAnimation.className}`}
+        style={heroAnimation.style}
+      >
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+            {heroText}
           </h1>
-          <p className="text-xl max-w-3xl mx-auto text-gray-200 animate-slide-up">
-            Projeleriniz hakkında konuşmak ve size nasıl yardımcı olabileceğimizi 
-            öğrenmek için bizimle iletişime geçin.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            {heroDesc}
           </p>
         </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none"></div>
       </section>
 
-      {/* Contact Info & Form */}
-      <section className="py-20">
+      {/* Professional Contact Information Section */}
+      <section className="py-20 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             
-            {/* İletişim Bilgileri */}
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8">
-                İletişim Bilgileri
+            {/* Contact Information */}
+            <div ref={contactInfoAnimation.elementRef}>
+              <h2 className={`text-3xl font-bold mb-8 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent ${contactInfoAnimation.className}`}
+                  style={contactInfoAnimation.style}>
+                {contactInfoText}
               </h2>
               
               <div className="space-y-6">
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card 
+                  ref={addressCard.elementRef}
+                  className={`hover:shadow-lg transition-all duration-700 ${addressCard.className}`}
+                  style={addressCard.style}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -85,7 +114,11 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card 
+                  ref={phoneCard.elementRef}
+                  className={`hover:shadow-lg transition-all duration-700 ${phoneCard.className}`}
+                  style={phoneCard.style}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -101,7 +134,11 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card 
+                  ref={emailCard.elementRef}
+                  className={`hover:shadow-lg transition-all duration-700 ${emailCard.className}`}
+                  style={emailCard.style}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -118,7 +155,11 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card 
+                  ref={hoursCard.elementRef}
+                  className={`hover:shadow-lg transition-all duration-700 ${hoursCard.className}`}
+                  style={hoursCard.style}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -138,13 +179,15 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* İletişim Formu */}
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8">
-                Bize Ulaşın
+            {/* Professional Contact Form */}
+            <div ref={formAnimation.elementRef}>
+              <h2 className={`text-3xl font-bold mb-8 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent ${formAnimation.className}`}
+                  style={formAnimation.style}>
+                {formText}
               </h2>
               
-              <Card className="hover:shadow-elegant transition-all duration-300">
+              <Card className={`hover:shadow-elegant transition-all duration-700 ${formAnimation.className}`}
+                   style={{...formAnimation.style, animationDelay: '600ms'}}>
                 <CardContent className="p-8">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
@@ -240,19 +283,25 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-20 bg-secondary">
+      {/* Professional Map Section */}
+      <section 
+        ref={mapAnimation.elementRef} 
+        className="py-20 bg-gradient-to-t from-background to-muted/20"
+      >
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+            <h2 className={`text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent ${mapAnimation.className}`}
+                style={mapAnimation.style}>
               Ofisimizi Ziyaret Edin
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className={`text-lg text-muted-foreground ${mapAnimation.className}`}
+               style={{...mapAnimation.style, animationDelay: '1000ms'}}>
               Bolu merkez lokasyonumuzda sizleri ağırlamaktan mutluluk duyarız.
             </p>
           </div>
           
-          <Card className="overflow-hidden hover:shadow-elegant transition-all duration-300">
+          <Card className={`overflow-hidden hover:shadow-elegant transition-all duration-700 ${mapAnimation.className}`}
+               style={{...mapAnimation.style, animationDelay: '1200ms'}}>
             <CardContent className="p-0">
               <div className="w-full h-96 bg-muted flex items-center justify-center">
                 <div className="text-center">
