@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row items-start justify-between">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left">
           {/* Logo sol tarafta */}
           <div className="mb-8 md:mb-0">
             <Link
@@ -15,7 +15,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
                 alt="Asya Danışmanlık Logo" 
-                className="h-28 w-auto"
+                className="h-16 md:h-28 w-auto mx-auto md:mx-0"
               />
             </Link>
           </div>
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
 
           {/* Adres bilgisi ve sosyal medya sağda */}
-          <div className="text-right">
+          <div className="text-center md:text-right">
             <div className="mb-4">
               <p className="text-sm text-muted-foreground mb-1">
                 Atatürk Mahallesi, İş Merkezi Sok. No:12
@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
             
             {/* Sosyal medya ikonları */}
-            <div className="flex justify-end space-x-4">
+            <div className="flex justify-center md:justify-end space-x-4">
               <a
                 href="https://instagram.com"
                 target="_blank"
