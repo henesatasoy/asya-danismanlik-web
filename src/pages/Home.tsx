@@ -27,7 +27,7 @@ const Home = () => {
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-light mb-8 tracking-wide">
-            <span className="block text-white/90 text-3xl md:text-4xl font-light mb-2 tracking-wider">
+            <span className="block text-gold text-3xl md:text-4xl font-light mb-2 tracking-wider">
               Güvenilir İş Ortağınız
             </span>
           </h1>
