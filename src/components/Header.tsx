@@ -20,14 +20,70 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-24",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-16 md:h-24",
         isScrolled 
           ? "bg-background/95 backdrop-blur-sm shadow-elegant" 
           : "bg-transparent"
       )}
     >
-      <nav className="container mx-auto px-6 h-full flex items-center">
-        <div className="w-full grid grid-cols-[1fr_auto_1fr] items-center">
+      <nav className="container mx-auto px-3 md:px-6 h-full flex items-center">
+        {/* Mobil görünüm */}
+        <div className="md:hidden w-full flex items-center justify-between">
+          {/* Logo sol tarafta */}
+          <Link
+            to="/"
+            className="hover:opacity-80 transition-opacity duration-300"
+          >
+            <img 
+              src="/lovable-uploads/6ae3607a-1bff-42d6-8d71-5848a2c20a8f.png" 
+              alt="Asya Danışmanlık Logo" 
+              className="h-12 w-auto"
+            />
+          </Link>
+          
+          {/* Mobil menü - yatay scroll */}
+          <div className="flex items-center space-x-4 overflow-x-auto scrollbar-hide">
+            <Link
+              to="/about"
+              className={cn(
+                "text-xs font-medium transition-colors duration-300 hover:text-gold whitespace-nowrap",
+                isActive('/about') ? "text-gold" : "text-foreground"
+              )}
+            >
+              Hakkımızda
+            </Link>
+            <Link
+              to="/services"
+              className={cn(
+                "text-xs font-medium transition-colors duration-300 hover:text-gold whitespace-nowrap",
+                isActive('/services') ? "text-gold" : "text-foreground"
+              )}
+            >
+              Hizmetler
+            </Link>
+            <Link
+              to="/projects"
+              className={cn(
+                "text-xs font-medium transition-colors duration-300 hover:text-gold whitespace-nowrap",
+                isActive('/projects') ? "text-gold" : "text-foreground"
+              )}
+            >
+              Projeler
+            </Link>
+            <Link
+              to="/contact"
+              className={cn(
+                "text-xs font-medium transition-colors duration-300 hover:text-gold whitespace-nowrap",
+                isActive('/contact') ? "text-gold" : "text-foreground"
+              )}
+            >
+              İletişim
+            </Link>
+          </div>
+        </div>
+
+        {/* Desktop görünüm */}
+        <div className="hidden md:grid w-full grid-cols-[1fr_auto_1fr] items-center">
           {/* Sol menü */}
           <div className="flex items-center justify-start space-x-8">
             <Link
