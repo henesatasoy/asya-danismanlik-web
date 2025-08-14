@@ -26,7 +26,7 @@ const Header = () => {
           : "bg-transparent"
       )}
     >
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="container mx-auto px-6 py-6">
         <div className="flex items-center">
           {/* Sol menü */}
           <div className="flex items-center justify-start space-x-8 flex-1">
@@ -61,7 +61,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/6ae3607a-1bff-42d6-8d71-5848a2c20a8f.png" 
                 alt="Asya Danışmanlık Logo" 
-                className="h-20 w-auto"
+                className="h-24 w-auto"
               />
             </Link>
           </div>
