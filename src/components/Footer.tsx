@@ -14,7 +14,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
               alt="Asya Danışmanlık Logo" 
-              className="h-72 md:h-42 w-auto"
+              className="h-32 md:h-36 w-auto"
             />
           </Link>
         </div>
