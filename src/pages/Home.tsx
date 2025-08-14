@@ -20,9 +20,15 @@ const Home = () => {
         }}
       >
         <div className="container mx-auto px-6 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Asya Danışmanlık
-            <span className="block text-gold text-3xl md:text-4xl mt-2">
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/833b85de-a743-435b-9409-48d1da99f7fe.png" 
+              alt="Asya Danışmanlık Logo" 
+              className="h-32 md:h-40 w-auto mx-auto mb-6 animate-scale-in"
+            />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="block text-gold text-3xl md:text-4xl">
               Güvenilir İş Ortağınız
             </span>
           </h1>
