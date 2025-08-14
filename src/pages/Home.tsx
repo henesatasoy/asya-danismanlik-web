@@ -5,11 +5,19 @@ import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-bg.jpg';
 import FloatingParticles from '@/components/FloatingParticles';
 import { useMousePosition } from '@/hooks/useMousePosition';
+import { useInView } from '@/hooks/useInView';
 import { useEffect, useState } from 'react';
 
 const Home = () => {
   const mousePosition = useMousePosition();
   const [scrollY, setScrollY] = useState(0);
+
+  // Section refs for new scroll animations
+  const servicesRef = useInView({ threshold: 0.2 });
+  const aboutRef = useInView({ threshold: 0.15 });
+  const projectsRef = useInView({ threshold: 0.2 });
+  const contactRef = useInView({ threshold: 0.2 });
+  const statsRef = useInView({ threshold: 0.3 });
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -68,9 +76,9 @@ const Home = () => {
       </section>
 
       {/* Services Preview Section */}
-      <section className="bg-white relative border-b border-gray-100 py-20">
+      <section ref={servicesRef.ref} className="bg-white relative border-b border-gray-100 py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className={`text-center mb-20 transition-all duration-1000 ease-out ${servicesRef.isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
               <span className="font-normal text-gold">Hizmet</span> Alanlarımız
             </h2>
@@ -82,7 +90,7 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
-            <Link to="/contact" className="block group">
+            <Link to="/contact" className={`block group transition-all duration-800 ease-out ${servicesRef.isInView ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-32 scale-95'}`} style={{transitionDelay: servicesRef.isInView ? '200ms' : '0ms'}}>
               <Card className="h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden cursor-pointer">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 <CardContent className="p-12 text-center h-full flex flex-col">
@@ -100,7 +108,7 @@ const Home = () => {
               </Card>
             </Link>
 
-            <Link to="/contact" className="block group">
+            <Link to="/contact" className={`block group transition-all duration-800 ease-out ${servicesRef.isInView ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-32 scale-95'}`} style={{transitionDelay: servicesRef.isInView ? '600ms' : '0ms'}}>
               <Card className="h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden cursor-pointer">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 <CardContent className="p-12 text-center h-full flex flex-col">
@@ -118,7 +126,7 @@ const Home = () => {
               </Card>
             </Link>
 
-            <Link to="/contact" className="block group">
+            <Link to="/contact" className={`block group transition-all duration-800 ease-out ${servicesRef.isInView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-20 scale-95'}`} style={{transitionDelay: servicesRef.isInView ? '400ms' : '0ms'}}>
               <Card className="h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden cursor-pointer">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 <CardContent className="p-12 text-center h-full flex flex-col">
@@ -137,7 +145,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="text-center mt-20">
+          <div className={`text-center mt-20 transition-all duration-1000 ease-out ${servicesRef.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`} style={{transitionDelay: servicesRef.isInView ? '800ms' : '0ms'}}>
             <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
               <Button asChild variant="outline" size="lg" className="border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-sm font-medium tracking-wide">
                 <Link to="/services">
@@ -158,10 +166,10 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="bg-gray-50 relative py-20">
+      <section ref={aboutRef.ref} className="bg-gray-50 relative py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-20">
+            <div className={`text-center mb-20 transition-all duration-1000 ease-out ${aboutRef.isInView ? 'opacity-100 translate-x-0 rotate-0' : 'opacity-0 translate-x-20 rotate-1'}`}>
               <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
                 <span className="font-normal text-gold">Hakkımızda</span>
               </h2>
@@ -169,7 +177,7 @@ const Home = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-20 items-center">
-              <div className="space-y-8">
+              <div className={`space-y-8 transition-all duration-1000 ease-out ${aboutRef.isInView ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-24'}`} style={{transitionDelay: aboutRef.isInView ? '200ms' : '0ms'}}>
                 <h3 className="text-3xl font-light text-foreground mb-6 leading-tight">
                   10+ Yıllık Deneyim ile 
                   <span className="text-gold font-normal"> Güvenilir Ortağınız</span>
@@ -188,7 +196,7 @@ const Home = () => {
               </div>
               
               <div className="grid grid-cols-2 gap-8">
-                <div className="p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <div className={`p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-800 ${aboutRef.isInView ? 'opacity-100 translate-x-0 rotate-0' : 'opacity-0 translate-x-16 -rotate-2'}`} style={{transitionDelay: aboutRef.isInView ? '600ms' : '0ms'}}>
                   <div className="w-16 h-16 mx-auto mb-6 bg-gold/5 rounded-full flex items-center justify-center">
                     <Award className="w-8 h-8 text-gold" />
                   </div>
@@ -196,7 +204,7 @@ const Home = () => {
                   <p className="text-muted-foreground">Alanında deneyimli profesyoneller</p>
                 </div>
                 
-                <div className="p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <div className={`p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-800 ${aboutRef.isInView ? 'opacity-100 translate-x-0 rotate-0' : 'opacity-0 translate-x-16 rotate-2'}`} style={{transitionDelay: aboutRef.isInView ? '400ms' : '0ms'}}>
                   <div className="w-16 h-16 mx-auto mb-6 bg-gold/5 rounded-full flex items-center justify-center">
                     <Target className="w-8 h-8 text-gold" />
                   </div>
@@ -210,9 +218,9 @@ const Home = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="bg-white relative border-b border-gray-100 py-20">
+      <section ref={projectsRef.ref} className="bg-white relative border-b border-gray-100 py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className={`text-center mb-20 transition-all duration-1000 ease-out ${projectsRef.isInView ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-75 translate-y-10'}`}>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
               <span className="font-normal text-gold">Projelerimiz</span>
             </h2>
@@ -223,7 +231,7 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto mb-16">
-            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div className={`p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-700 ${projectsRef.isInView ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-20 rotate-1'}`} style={{transitionDelay: projectsRef.isInView ? '500ms' : '0ms'}}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <Briefcase className="w-10 h-10 text-gold" />
               </div>
@@ -233,7 +241,7 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div className={`p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-700 ${projectsRef.isInView ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-20 -rotate-2'}`} style={{transitionDelay: projectsRef.isInView ? '300ms' : '0ms'}}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <TrendingUp className="w-10 h-10 text-gold" />
               </div>
@@ -243,7 +251,7 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div className={`p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-700 ${projectsRef.isInView ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-20 rotate-3'}`} style={{transitionDelay: projectsRef.isInView ? '100ms' : '0ms'}}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <Building className="w-10 h-10 text-gold" />
               </div>
@@ -266,10 +274,10 @@ const Home = () => {
       </section>
 
       {/* Contact Preview Section */}
-      <section className="bg-gray-900 text-white relative py-20">
+      <section ref={contactRef.ref} className="bg-gray-900 text-white relative py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="mb-20">
+            <div className={`mb-20 transition-all duration-1000 ease-out ${contactRef.isInView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-16 scale-95'}`}>
               <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-tight">
                 <span className="font-normal text-gold">İletişim</span>
               </h2>
@@ -281,7 +289,7 @@ const Home = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-12 mb-16">
-              <div className="text-center">
+          <div className={`text-center transition-all duration-900 ease-out ${projectsRef.isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} style={{transitionDelay: projectsRef.isInView ? '700ms' : '0ms'}}>
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20">
                   <Mail className="w-10 h-10 text-gold" />
                 </div>
@@ -319,10 +327,10 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-black text-white relative py-[50px]">
+      <section ref={statsRef.ref} className="bg-black text-white relative py-[50px]">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-16 text-center max-w-5xl mx-auto">
-            <div className="group">
+            <div className={`group transition-all duration-800 ease-out ${statsRef.isInView ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-20 scale-90'}`} style={{transitionDelay: statsRef.isInView ? '400ms' : '0ms'}}>
               <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
                 <TrendingUp size={32} className="text-gold" />
               </div>
@@ -330,7 +338,7 @@ const Home = () => {
               <p className="text-white/70 text-xl font-light tracking-wide">Başarılı Proje</p>
             </div>
             
-            <div className="group">
+            <div className={`group transition-all duration-800 ease-out ${statsRef.isInView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-20 scale-90'}`} style={{transitionDelay: statsRef.isInView ? '200ms' : '0ms'}}>
               <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
                 <Users size={32} className="text-gold" />
               </div>
@@ -338,7 +346,7 @@ const Home = () => {
               <p className="text-white/70 text-xl font-light tracking-wide">Mutlu Müşteri</p>
             </div>
             
-            <div className="group">
+            <div className={`group transition-all duration-800 ease-out ${statsRef.isInView ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-20 scale-90'}`} style={{transitionDelay: statsRef.isInView ? '0ms' : '0ms'}}>
               <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
                 <Target size={32} className="text-gold" />
               </div>
