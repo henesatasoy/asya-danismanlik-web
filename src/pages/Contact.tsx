@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import { useScrollAnimation, useSlideLeftAnimation, useSlideRightAnimation, useScaleInAnimation, useRotateInAnimation, useZoomInAnimation, useFlipInAnimation, useElasticAnimation } from '@/hooks/useScrollAnimation';
+import { useCrazyAnimation, useGlitchAnimation, useMorphAnimation } from '@/hooks/useScrollAnimation';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,17 +18,17 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  // Scroll animations - farklı efekt türleri
-  const heroAnimation = useScrollAnimation();
-  const contactInfoAnimation = useSlideLeftAnimation();
-  const formAnimation = useSlideRightAnimation();
-  const mapAnimation = useZoomInAnimation();
+  // ÇOK ÇILGIN ANIMASYONLAR!
+  const heroAnimation = useCrazyAnimation();
+  const contactInfoAnimation = useGlitchAnimation();
+  const formAnimation = useMorphAnimation();
+  const mapAnimation = useCrazyAnimation(800);
   
-  // Her kart için farklı efektler
-  const addressCard = useRotateInAnimation(100);
-  const phoneCard = useFlipInAnimation(200);
-  const emailCard = useScaleInAnimation(300);
-  const hoursCard = useElasticAnimation(400);
+  // Her kart için çılgın efektler
+  const addressCard = useMorphAnimation(100);
+  const phoneCard = useGlitchAnimation(200);
+  const emailCard = useCrazyAnimation(300);
+  const hoursCard = useMorphAnimation(400);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -56,24 +56,19 @@ const Contact = () => {
 
   return (
     <div>
-      {/* Hero Section */}
+      {/* Hero Section - 3D Matrix Effect */}
       <section 
         ref={heroAnimation.elementRef} 
-        className="bg-gradient-dark text-white py-20"
+        className="bg-gradient-dark text-white py-20 overflow-hidden"
+        style={{ perspective: '1000px' }}
       >
         <div className="container mx-auto px-6 text-center">
-          <h1 className={`text-5xl font-bold mb-6 transition-all duration-1000 ${
-            heroAnimation.isVisible 
-              ? 'opacity-100 translate-y-0 animate-scale-in' 
-              : 'opacity-0 translate-y-10'
-          }`}>
+          <h1 className={`text-5xl font-bold mb-6 ${heroAnimation.className}`}
+              style={heroAnimation.style}>
             İletişim
           </h1>
-          <p className={`text-xl max-w-3xl mx-auto text-gray-200 transition-all duration-1000 delay-300 ${
-            heroAnimation.isVisible 
-              ? 'opacity-100 translate-y-0 animate-fade-in' 
-              : 'opacity-0 translate-y-10'
-          }`}>
+          <p className={`text-xl max-w-3xl mx-auto text-gray-200 ${heroAnimation.className}`}
+             style={{...heroAnimation.style, animationDelay: '500ms'}}>
             Projeleriniz hakkında konuşmak ve size nasıl yardımcı olabileceğimizi 
             öğrenmek için bizimle iletişime geçin.
           </p>
@@ -85,9 +80,9 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             
-            {/* İletişim Bilgileri */}
+            {/* İletişim Bilgileri - Glitch Effect */}
             <div ref={contactInfoAnimation.elementRef}>
-              <h2 className={`text-3xl font-bold text-foreground mb-8 ${contactInfoAnimation.className}`}
+              <h2 className={`text-3xl font-bold text-foreground mb-8 ${contactInfoAnimation.className} ${contactInfoAnimation.glitchClass}`}
                   style={contactInfoAnimation.style}>
                 İletişim Bilgileri
               </h2>
@@ -116,7 +111,7 @@ const Contact = () => {
 
                 <Card 
                   ref={phoneCard.elementRef}
-                  className={`hover:shadow-lg transition-all duration-700 ${phoneCard.className}`}
+                  className={`hover:shadow-lg transition-all duration-700 ${phoneCard.className} ${phoneCard.glitchClass}`}
                   style={phoneCard.style}
                 >
                   <CardContent className="p-6">
@@ -179,15 +174,15 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* İletişim Formu */}
+            {/* İletişim Formu - Morphing Effect */}
             <div ref={formAnimation.elementRef}>
               <h2 className={`text-3xl font-bold text-foreground mb-8 ${formAnimation.className}`}
                   style={formAnimation.style}>
                 Bize Ulaşın
               </h2>
               
-              <Card className={`hover:shadow-elegant transition-all duration-700 delay-200 ${formAnimation.className}`}
-                   style={{...formAnimation.style, animationDelay: '400ms'}}>
+              <Card className={`hover:shadow-elegant transition-all duration-700 ${formAnimation.className}`}
+                   style={{...formAnimation.style, animationDelay: '600ms'}}>
                 <CardContent className="p-8">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
@@ -295,13 +290,13 @@ const Contact = () => {
               Ofisimizi Ziyaret Edin
             </h2>
             <p className={`text-lg text-muted-foreground ${mapAnimation.className}`}
-               style={{...mapAnimation.style, animationDelay: '200ms'}}>
+               style={{...mapAnimation.style, animationDelay: '1000ms'}}>
               Bolu merkez lokasyonumuzda sizleri ağırlamaktan mutluluk duyarız.
             </p>
           </div>
           
           <Card className={`overflow-hidden hover:shadow-elegant transition-all duration-700 ${mapAnimation.className}`}
-               style={{...mapAnimation.style, animationDelay: '400ms'}}>
+               style={{...mapAnimation.style, animationDelay: '1200ms'}}>
             <CardContent className="p-0">
               <div className="w-full h-96 bg-muted flex items-center justify-center">
                 <div className="text-center">

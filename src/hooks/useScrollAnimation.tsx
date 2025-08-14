@@ -48,14 +48,31 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
   return { elementRef, isVisible };
 };
 
-export const useStaggeredAnimation = (delay: number = 0, animationType: string = 'fade-in') => {
+export const useCrazyAnimation = (delay: number = 0) => {
   const { elementRef, isVisible } = useScrollAnimation();
   
   return {
     elementRef,
     className: isVisible 
-      ? `animate-${animationType}` 
-      : 'opacity-0 translate-y-10',
+      ? 'animate-matrix-enter' 
+      : 'opacity-0',
+    style: {
+      animationDelay: isVisible ? `${delay}ms` : '0ms',
+      animationFillMode: 'both',
+      transformStyle: 'preserve-3d' as const
+    }
+  };
+};
+
+export const useGlitchAnimation = (delay: number = 0) => {
+  const { elementRef, isVisible } = useScrollAnimation();
+  
+  return {
+    elementRef,
+    className: isVisible 
+      ? 'animate-matrix-enter' 
+      : 'opacity-0',
+    glitchClass: isVisible ? 'animate-glitch-crazy' : '',
     style: {
       animationDelay: isVisible ? `${delay}ms` : '0ms',
       animationFillMode: 'both'
@@ -63,11 +80,17 @@ export const useStaggeredAnimation = (delay: number = 0, animationType: string =
   };
 };
 
-// Farklı efekt türleri için yardımcı fonksiyonlar
-export const useSlideLeftAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'slide-left');
-export const useSlideRightAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'slide-right');
-export const useScaleInAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'scale-in');
-export const useRotateInAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'rotate-in');
-export const useZoomInAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'zoom-in');
-export const useFlipInAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'flip-in');
-export const useElasticAnimation = (delay: number = 0) => useStaggeredAnimation(delay, 'elastic');
+export const useMorphAnimation = (delay: number = 0) => {
+  const { elementRef, isVisible } = useScrollAnimation();
+  
+  return {
+    elementRef,
+    className: isVisible 
+      ? 'animate-morph-wild' 
+      : 'opacity-0',
+    style: {
+      animationDelay: isVisible ? `${delay}ms` : '0ms',
+      animationFillMode: 'both'
+    }
+  };
+};
