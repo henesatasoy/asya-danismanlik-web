@@ -55,13 +55,6 @@ All colors MUST be HSL.
     /* Shadows */
     --shadow-gold: 0 4px 20px hsl(51, 100%, 50%, 0.3);
     --shadow-elegant: 0 10px 40px hsl(0, 0%, 0%, 0.1);
-    --shadow-glow: 0 0 30px hsl(51, 100%, 50%, 0.4);
-    --shadow-premium: 0 25px 50px -12px hsl(0, 0%, 0%, 0.25);
-    
-    /* Advanced animations */
-    --transition-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
