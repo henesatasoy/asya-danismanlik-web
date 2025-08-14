@@ -91,7 +91,7 @@ const Home = () => {
       {/* Services Preview Section */}
       <section className="py-32 bg-white relative border-b border-gray-100">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
               <span className="font-normal text-gold">Hizmet</span> Alanlarımız
             </h2>
@@ -103,7 +103,7 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
-            <Link to="/contact" className="block group">
+            <Link to="/contact" className="block group animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <Card className="h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden cursor-pointer">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 <CardContent className="p-12 text-center h-full flex flex-col">
@@ -121,7 +121,7 @@ const Home = () => {
               </Card>
             </Link>
 
-            <Link to="/contact" className="block group">
+            <Link to="/contact" className="block group animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <Card className="h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden cursor-pointer">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 <CardContent className="p-12 text-center h-full flex flex-col">
@@ -139,7 +139,7 @@ const Home = () => {
               </Card>
             </Link>
 
-            <Link to="/contact" className="block group">
+            <Link to="/contact" className="block group animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <Card className="h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden cursor-pointer">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 <CardContent className="p-12 text-center h-full flex flex-col">
@@ -158,7 +158,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="text-center mt-20">
+          <div className="text-center mt-20 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
               <Button 
                 asChild 
@@ -192,7 +192,7 @@ const Home = () => {
       <section className="py-32 bg-gray-50 relative">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-20">
+            <div className="text-center mb-20 animate-fade-in">
               <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
                 <span className="font-normal text-gold">Hakkımızda</span>
               </h2>
@@ -200,7 +200,7 @@ const Home = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-20 items-center">
-              <div className="space-y-8">
+              <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <h3 className="text-3xl font-light text-foreground mb-6 leading-tight">
                   10+ Yıllık Deneyim ile 
                   <span className="text-gold font-normal"> Güvenilir Ortağınız</span>
@@ -219,7 +219,7 @@ const Home = () => {
               </div>
               
               <div className="grid grid-cols-2 gap-8">
-                <div className="p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <div className="p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.3s' }}>
                   <div className="w-16 h-16 mx-auto mb-6 bg-gold/5 rounded-full flex items-center justify-center">
                     <Award className="w-8 h-8 text-gold" />
                   </div>
@@ -227,7 +227,7 @@ const Home = () => {
                   <p className="text-muted-foreground">Alanında deneyimli profesyoneller</p>
                 </div>
                 
-                <div className="p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <div className="p-8 text-center bg-white rounded-sm border border-gray-200 hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                   <div className="w-16 h-16 mx-auto mb-6 bg-gold/5 rounded-full flex items-center justify-center">
                     <Target className="w-8 h-8 text-gold" />
                   </div>
@@ -243,7 +243,7 @@ const Home = () => {
       {/* Projects Section */}
       <section className="py-32 bg-white relative border-b border-gray-100">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
               <span className="font-normal text-gold">Projelerimiz</span>
             </h2>
@@ -254,7 +254,7 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto mb-16">
-            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <Briefcase className="w-10 h-10 text-gold" />
               </div>
@@ -264,7 +264,7 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <TrendingUp className="w-10 h-10 text-gold" />
               </div>
@@ -274,7 +274,7 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div className="p-10 text-center bg-gray-50 rounded-sm border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <Building className="w-10 h-10 text-gold" />
               </div>
@@ -285,7 +285,7 @@ const Home = () => {
             </div>
           </div>
           
-          <div className="text-center">
+          <div className="text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <Button asChild variant="outline" className="border-gold text-gold hover:bg-gold hover:text-white rounded-sm px-6 py-3 font-medium">
               <Link to="/projects">
                 Tüm Projeleri Görüntüle
@@ -300,7 +300,7 @@ const Home = () => {
       <section className="py-32 bg-gray-900 text-white relative">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="mb-20">
+            <div className="mb-20 animate-fade-in">
               <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-tight">
                 <span className="font-normal text-gold">İletişim</span>
               </h2>
@@ -312,7 +312,7 @@ const Home = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-12 mb-16">
-              <div className="text-center">
+              <div className="text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20">
                   <Mail className="w-10 h-10 text-gold" />
                 </div>
@@ -320,7 +320,7 @@ const Home = () => {
                 <p className="text-white/70 text-lg">info@asyadanismanlik.com</p>
               </div>
               
-              <div className="text-center">
+              <div className="text-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20">
                   <Building className="w-10 h-10 text-gold" />
                 </div>
@@ -328,7 +328,7 @@ const Home = () => {
                 <p className="text-white/70 text-lg">İstanbul / Türkiye</p>
               </div>
               
-              <div className="text-center">
+              <div className="text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20">
                   <Users className="w-10 h-10 text-gold" />
                 </div>
@@ -337,12 +337,14 @@ const Home = () => {
               </div>
             </div>
             
-            <Button asChild variant="elegant" size="lg" className="px-10 py-4 text-lg rounded-sm font-medium">
-              <Link to="/contact">
-                İletişime Geçin
-                <ArrowRight className="ml-2" size={18} />
-              </Link>
-            </Button>
+            <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <Button asChild variant="elegant" size="lg" className="px-10 py-4 text-lg rounded-sm font-medium">
+                <Link to="/contact">
+                  İletişime Geçin
+                  <ArrowRight className="ml-2" size={18} />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -351,7 +353,7 @@ const Home = () => {
       <section className="py-32 bg-black text-white relative">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-16 text-center max-w-5xl mx-auto">
-            <div className="group">
+            <div className="group animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
                 <TrendingUp size={32} className="text-gold" />
               </div>
@@ -359,7 +361,7 @@ const Home = () => {
               <p className="text-white/70 text-xl font-light tracking-wide">Başarılı Proje</p>
             </div>
             
-            <div className="group">
+            <div className="group animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
                 <Users size={32} className="text-gold" />
               </div>
@@ -367,7 +369,7 @@ const Home = () => {
               <p className="text-white/70 text-xl font-light tracking-wide">Mutlu Müşteri</p>
             </div>
             
-            <div className="group">
+            <div className="group animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
                 <Target size={32} className="text-gold" />
               </div>
