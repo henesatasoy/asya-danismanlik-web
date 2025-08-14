@@ -1,10 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, DollarSign, Building, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import investmentIcon from '@/assets/investment-icon.png';
-import businessIcon from '@/assets/business-icon.png';
-import capacityIcon from '@/assets/capacity-icon.png';
 
 const Services = () => {
   return (
@@ -30,7 +27,9 @@ const Services = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <div className="flex items-center mb-6">
-                <img src={investmentIcon} alt="Yatırım Teşvik" className="w-16 h-16 mr-4" />
+                <div className="w-16 h-16 mr-4 bg-gold/10 rounded-full flex items-center justify-center">
+                  <DollarSign className="w-8 h-8 text-gold" />
+                </div>
                 <h2 className="text-4xl font-bold text-gold">Yatırım Teşvik</h2>
               </div>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
@@ -92,7 +91,9 @@ const Services = () => {
             </div>
             <div>
               <div className="flex items-center mb-6">
-                <img src={businessIcon} alt="İş Geliştirme" className="w-16 h-16 mr-4" />
+                <div className="w-16 h-16 mr-4 bg-gold/10 rounded-full flex items-center justify-center">
+                  <Building className="w-8 h-8 text-gold" />
+                </div>
                 <h2 className="text-4xl font-bold text-gold">İş Geliştirme</h2>
               </div>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
@@ -124,7 +125,9 @@ const Services = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <div className="flex items-center mb-6">
-                <img src={capacityIcon} alt="Kapasite Geliştirme" className="w-16 h-16 mr-4" />
+                <div className="w-16 h-16 mr-4 bg-gold/10 rounded-full flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-gold" />
+                </div>
                 <h2 className="text-4xl font-bold text-gold">Kapasite Geliştirme</h2>
               </div>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
