@@ -13,9 +13,6 @@ const Footer = () => {
           
           {/* Navigation Links */}
           <div className="text-center md:text-left">
-            <h3 className="text-lg font-light text-gold mb-6 tracking-wide">
-              Menü
-            </h3>
             <div className="space-y-3">
               <Link
                 to="/"
@@ -81,9 +78,6 @@ const Footer = () => {
 
           {/* Contact & Social */}
           <div className="text-center md:text-right">
-            <h3 className="text-lg font-light text-gold mb-6 tracking-wide">
-              İletişim
-            </h3>
             <div className="space-y-2 mb-6">
               <p className="text-white/70 font-light text-sm leading-relaxed">
                 İhsaniye Mahallesi<br />
