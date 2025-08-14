@@ -47,7 +47,7 @@ const Header = () => {
               to="/about"
               className={cn(
                 "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide font-sans",
-                isActive('/about') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium"
+                isActive('/about') ? "text-gold font-semibold" : "text-black"
               )}
             >
               Hakkımızda
@@ -57,7 +57,7 @@ const Header = () => {
               to="/services"
               className={cn(
                 "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide font-sans",
-                isActive('/services') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium"
+                isActive('/services') ? "text-gold font-semibold" : "text-black"
               )}
             >
               Hizmetler
@@ -67,7 +67,7 @@ const Header = () => {
               to="/projects"
               className={cn(
                 "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide font-sans",
-                isActive('/projects') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium"
+                isActive('/projects') ? "text-gold font-semibold" : "text-black"
               )}
             >
               Projeler
@@ -77,7 +77,7 @@ const Header = () => {
               to="/contact"
               className={cn(
                 "text-xs font-medium transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide font-sans",
-                isActive('/contact') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium"
+                isActive('/contact') ? "text-gold font-semibold" : "text-black"
               )}
             >
               İletişim
@@ -94,7 +94,7 @@ const Header = () => {
               to="/about"
               className={cn(
                 "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide font-sans",
-                isActive('/about') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium"
+                isActive('/about') ? "text-gold font-semibold" : "text-black"
               )}
             >
               Hakkımızda
@@ -104,7 +104,7 @@ const Header = () => {
               to="/contact"
               className={cn(
                 "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide font-sans",
-                isActive('/contact') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium"
+                isActive('/contact') ? "text-gold font-semibold" : "text-black"
               )}
             >
               İletişim
@@ -132,7 +132,7 @@ const Header = () => {
               to="/services"
               className={cn(
                 "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide font-sans",
-                isActive('/services') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium"
+                isActive('/services') ? "text-gold font-semibold" : "text-black"
               )}
             >
               Hizmetlerimiz
@@ -142,7 +142,7 @@ const Header = () => {
               to="/projects"
               className={cn(
                 "text-sm font-medium transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide font-sans",
-                isActive('/projects') ? "text-gold font-semibold" : isScrolled ? "text-slate-600" : "text-white/95 font-medium"
+                isActive('/projects') ? "text-gold font-semibold" : "text-black"
               )}
             >
               Projelerimiz
