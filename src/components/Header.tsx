@@ -27,13 +27,13 @@ const Header = () => {
       )}
     >
       <nav className="container mx-auto px-6 h-full flex items-center">
-        <div className="w-full grid grid-cols-3 items-center">
+        <div className="w-full grid grid-cols-[1fr_auto_1fr] items-center">
           {/* Sol menü */}
-          <div className="flex items-center justify-start space-x-8">
+          <div className="flex items-center justify-start space-x-6">
             <Link
               to="/about"
               className={cn(
-                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group",
+                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group whitespace-nowrap",
                 isActive('/about') ? "text-gold" : "text-foreground"
               )}
             >
@@ -43,7 +43,7 @@ const Header = () => {
             <Link
               to="/contact"
               className={cn(
-                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group",
+                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group whitespace-nowrap",
                 isActive('/contact') ? "text-gold" : "text-foreground"
               )}
             >
@@ -53,7 +53,7 @@ const Header = () => {
           </div>
 
           {/* Logo ortada */}
-          <div className="flex justify-center">
+          <div className="flex justify-center px-8">
             <Link
               to="/"
               className="hover:opacity-80 transition-opacity duration-300"
@@ -67,11 +67,11 @@ const Header = () => {
           </div>
 
           {/* Sağ menü */}
-          <div className="flex items-center justify-end space-x-8">
+          <div className="flex items-center justify-end space-x-6">
             <Link
               to="/services"
               className={cn(
-                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group",
+                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group whitespace-nowrap",
                 isActive('/services') ? "text-gold" : "text-foreground"
               )}
             >
@@ -81,7 +81,7 @@ const Header = () => {
             <Link
               to="/projects"
               className={cn(
-                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group",
+                "text-sm font-medium transition-colors duration-300 hover:text-gold relative group whitespace-nowrap",
                 isActive('/projects') ? "text-gold" : "text-foreground"
               )}
             >
