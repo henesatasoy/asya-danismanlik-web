@@ -146,7 +146,7 @@ const Home = () => {
               <div className="w-16 h-16 mx-auto mb-4 bg-gold rounded-full flex items-center justify-center">
                 <Target size={32} className="text-primary" />
               </div>
-              <h3 className="text-4xl font-bold text-gold mb-2">15+</h3>
+              <h3 className="text-4xl font-bold text-gold mb-2">10+</h3>
               <p className="text-gray-300">Yıllık Deneyim</p>
             </div>
           </div>
