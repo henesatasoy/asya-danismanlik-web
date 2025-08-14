@@ -47,7 +47,7 @@ const Header = () => {
               to="/about"
               className={cn(
                 "text-xs font-light transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide",
-                isActive('/about') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
+                isActive('/about') ? "text-gold" : isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
               )}
             >
               Hakkımızda
@@ -57,7 +57,7 @@ const Header = () => {
               to="/services"
               className={cn(
                 "text-xs font-light transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide",
-                isActive('/services') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
+                isActive('/services') ? "text-gold" : isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
               )}
             >
               Hizmetler
@@ -67,7 +67,7 @@ const Header = () => {
               to="/projects"
               className={cn(
                 "text-xs font-light transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide",
-                isActive('/projects') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
+                isActive('/projects') ? "text-gold" : isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
               )}
             >
               Projeler
@@ -77,7 +77,7 @@ const Header = () => {
               to="/contact"
               className={cn(
                 "text-xs font-light transition-all duration-300 hover:text-gold whitespace-nowrap relative group tracking-wide",
-                isActive('/contact') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
+                isActive('/contact') ? "text-gold" : isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
               )}
             >
               İletişim
@@ -94,7 +94,7 @@ const Header = () => {
               to="/about"
               className={cn(
                 "text-sm font-light transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide",
-                isActive('/about') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
+                isActive('/about') ? "text-gold" : isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
               )}
             >
               Hakkımızda
@@ -104,7 +104,7 @@ const Header = () => {
               to="/contact"
               className={cn(
                 "text-sm font-light transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide",
-                isActive('/contact') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
+                isActive('/contact') ? "text-gold" : isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
               )}
             >
               İletişim
@@ -132,7 +132,7 @@ const Header = () => {
               to="/services"
               className={cn(
                 "text-sm font-light transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide",
-                isActive('/services') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
+                isActive('/services') ? "text-gold" : isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
               )}
             >
               Hizmetlerimiz
@@ -142,7 +142,7 @@ const Header = () => {
               to="/projects"
               className={cn(
                 "text-sm font-light transition-all duration-300 hover:text-gold relative group whitespace-nowrap tracking-wide",
-                isActive('/projects') ? "text-gold" : isScrolled ? "text-foreground" : "text-white/90"
+                isActive('/projects') ? "text-gold" : isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
               )}
             >
               Projelerimiz
