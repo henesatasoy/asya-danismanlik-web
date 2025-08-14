@@ -26,8 +26,7 @@ const Home = () => {
         style={{
           backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(${heroImage})`,
           backgroundSize: 'cover',
-          backgroundPosition: `center ${scrollY * 0.5}px`,
-          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/30"></div>
