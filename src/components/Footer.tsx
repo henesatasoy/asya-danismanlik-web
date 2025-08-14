@@ -64,7 +64,7 @@ const Footer = () => {
                 Merkez, Bolu 14200
               </p>
               <p className="text-sm text-muted-foreground">
-                +90 (216) 555 01 23
+                +90 507 863 30 30
               </p>
             </div>
             

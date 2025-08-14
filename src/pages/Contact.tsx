@@ -94,8 +94,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Telefon</h3>
                         <p className="text-muted-foreground">
-                          +90 (216) 555 01 23<br />
-                          +90 (216) 555 01 24
+                          +90 507 863 30 30
                         </p>
                       </div>
                     </div>
