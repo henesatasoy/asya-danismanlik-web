@@ -1,11 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, TrendingUp, Users, Target } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Target, DollarSign, Building, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-bg.jpg';
-import investmentIcon from '@/assets/investment-icon.png';
-import businessIcon from '@/assets/business-icon.png';
-import capacityIcon from '@/assets/capacity-icon.png';
 
 const Home = () => {
   return (
@@ -66,7 +63,7 @@ const Home = () => {
             <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
-                  <img src={investmentIcon} alt="Yatırım Teşvik" className="w-12 h-12" />
+                  <DollarSign className="w-10 h-10 text-gold" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gold mb-4">
                   Yatırım Teşvik
@@ -81,7 +78,7 @@ const Home = () => {
             <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
-                  <img src={businessIcon} alt="İş Geliştirme" className="w-12 h-12" />
+                  <Building className="w-10 h-10 text-gold" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gold mb-4">
                   İş Geliştirme
@@ -96,7 +93,7 @@ const Home = () => {
             <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
-                  <img src={capacityIcon} alt="Kapasite Geliştirme" className="w-12 h-12" />
+                  <Zap className="w-10 h-10 text-gold" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gold mb-4">
                   Kapasite Geliştirme
