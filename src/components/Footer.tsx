@@ -6,8 +6,59 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
-          {/* Logo - mobilde ortada, desktop'ta solda */}
-          <div className="mb-8 md:mb-0 text-center md:text-left">
+          {/* Mobilde logo ve menü yan yana */}
+          <div className="flex flex-row md:flex-col justify-between items-start md:items-start w-full md:w-auto mb-8 md:mb-0">
+            {/* Hızlı menü - mobilde sol tarafta, desktop'ta normal */}
+            <div className="flex flex-col items-start space-y-3 md:space-y-0 md:flex-row md:space-x-8">
+              <Link
+                to="/"
+                className="text-sm hover:text-gold transition-colors duration-300"
+              >
+                Ana Sayfa
+              </Link>
+              <Link
+                to="/about"
+                className="text-sm hover:text-gold transition-colors duration-300"
+              >
+                Hakkımızda
+              </Link>
+              <Link
+                to="/contact"
+                className="text-sm hover:text-gold transition-colors duration-300"
+              >
+                İletişim
+              </Link>
+              <Link
+                to="/services"
+                className="text-sm hover:text-gold transition-colors duration-300"
+              >
+                Hizmetlerimiz
+              </Link>
+              <Link
+                to="/projects"
+                className="text-sm hover:text-gold transition-colors duration-300"
+              >
+                Projelerimiz
+              </Link>
+            </div>
+
+            {/* Logo - mobilde sağ tarafta, desktop'ta üstte */}
+            <div className="md:hidden">
+              <Link
+                to="/"
+                className="hover:opacity-80 transition-opacity duration-300"
+              >
+                <img 
+                  src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
+                  alt="Asya Danışmanlık Logo" 
+                  className="h-16 w-auto"
+                />
+              </Link>
+            </div>
+          </div>
+
+          {/* Desktop logo */}
+          <div className="hidden md:block text-center">
             <Link
               to="/"
               className="hover:opacity-80 transition-opacity duration-300"
@@ -15,42 +66,8 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/6421f3a4-a5d9-4446-8915-67ea626ec39c.png" 
                 alt="Asya Danışmanlık Logo" 
-                className="h-16 md:h-28 w-auto mx-auto md:mx-0"
+                className="h-28 w-auto mx-auto"
               />
-            </Link>
-          </div>
-
-          {/* Hızlı menü - mobilde sola alt alta, desktop'ta ortada */}
-          <div className="flex flex-col items-start md:items-center space-y-3 md:space-y-0 md:flex-row md:space-x-8 mb-8 md:mb-0 w-full md:w-auto">
-            <Link
-              to="/"
-              className="text-sm hover:text-gold transition-colors duration-300"
-            >
-              Ana Sayfa
-            </Link>
-            <Link
-              to="/about"
-              className="text-sm hover:text-gold transition-colors duration-300"
-            >
-              Hakkımızda
-            </Link>
-            <Link
-              to="/contact"
-              className="text-sm hover:text-gold transition-colors duration-300"
-            >
-              İletişim
-            </Link>
-            <Link
-              to="/services"
-              className="text-sm hover:text-gold transition-colors duration-300"
-            >
-              Hizmetlerimiz
-            </Link>
-            <Link
-              to="/projects"
-              className="text-sm hover:text-gold transition-colors duration-300"
-            >
-              Projelerimiz
             </Link>
           </div>
 
