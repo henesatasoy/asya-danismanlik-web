@@ -61,7 +61,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/6ae3607a-1bff-42d6-8d71-5848a2c20a8f.png" 
                 alt="Asya Danışmanlık Logo" 
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
           </div>
