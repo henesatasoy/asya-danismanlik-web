@@ -274,6 +274,13 @@ export default {
 				'rainbow-glitch': 'rainbow-glitch 2s ease-in-out infinite',
 				'text-rainbow': 'text-rainbow 3s ease-in-out infinite',
 				'bg-rainbow': 'bg-rainbow 4s ease-in-out infinite',
+				"float": "float 6s ease-in-out infinite",
+				"glow-pulse": "glow-pulse 3s ease-in-out infinite",
+				"slide-up-elegant": "slide-up-elegant 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"slide-in-left": "slide-in-left 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"slide-in-right": "slide-in-right 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"zoom-in-elegant": "zoom-in-elegant 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"rotate-in": "rotate-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 			}
 		}
 	},
