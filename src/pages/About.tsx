@@ -11,7 +11,7 @@ const About = () => {
             Hakkımızda
           </h1>
           <p className="text-xl max-w-3xl mx-auto text-gray-200 animate-slide-up">
-            15 yılı aşkın deneyimimizle, iş dünyasının dinamik yapısında 
+            10 yılı aşkın deneyimimizle, iş dünyasının dinamik yapısında 
             şirketlere güvenilir danışmanlık hizmetleri sunuyoruz.
           </p>
         </div>
@@ -132,7 +132,7 @@ const About = () => {
                   Deneyimli Uzman Kadromuz
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Ekibimiz, farklı sektörlerden gelen 15+ yıl deneyimli uzmanlardan oluşmaktadır. 
+                  Ekibimiz, farklı sektörlerden gelen 10+ yıl deneyimli uzmanlardan oluşmaktadır. 
                   İktisat, işletme, mühendislik ve hukuk alanlarında akademik geçmişe sahip 
                   profesyonellerimiz, müşterilerimizin her türlü ihtiyacına cevap verebilecek 
                   bilgi ve deneyime sahiptir.
