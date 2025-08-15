@@ -148,9 +148,6 @@ const Header = () => {
                   <div className="absolute w-2 h-2 bg-gold rounded-full shadow-sm shadow-gold/50" style={{ bottom: '10%', left: '50%', transform: 'translateX(-50%)' }}></div>
                 </div>
                 
-                {/* Parlayan merkez nokta efektleri */}
-                <div className="absolute w-3 h-3 bg-gold rounded-full animate-ping shadow-lg shadow-gold/60" style={{ animationDelay: '0s', animationDuration: '3s' }}></div>
-                
                 {/* Ek atmosphere parçacıkları */}
                 <div className="absolute w-1 h-1 bg-gold/80 rounded-full animate-ping" style={{ top: '25%', right: '30%', animationDelay: '1s', animationDuration: '2s' }}></div>
                 <div className="absolute w-1 h-1 bg-gold/80 rounded-full animate-ping" style={{ bottom: '25%', left: '30%', animationDelay: '2s', animationDuration: '2s' }}></div>
