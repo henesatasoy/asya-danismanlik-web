@@ -178,7 +178,10 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden border-b-4 border-gold/20">
+        {/* Subtle gradient overlay at the top */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+        
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
@@ -202,6 +205,12 @@ const Services = () => {
               <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform duration-300" size={20} />
             </Link>
           </Button>
+        </div>
+        
+        {/* Elegant bottom separator with fade effect */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <div className="h-12 bg-gradient-to-b from-gray-900 to-transparent"></div>
+          <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
         </div>
       </section>
     </div>
