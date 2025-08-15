@@ -186,8 +186,8 @@ const Services = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-wide">
-            Projeleriniz İçin <span className="text-gold font-semibold">Hemen Başlayın</span>
+          <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-wide text-gold">
+            Projeleriniz İçin Hemen Başlayın
           </h2>
           <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
           <p className="text-xl mb-12 text-white/70 max-w-xl mx-auto font-light leading-relaxed">
