@@ -22,8 +22,8 @@ const Header = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-16 md:h-24",
         isScrolled 
-          ? "bg-background/95 backdrop-blur-md shadow-soft border-b border-gold/10" 
-          : "bg-gradient-to-b from-black/30 via-black/10 to-transparent backdrop-blur-sm"
+          ? "bg-background/80 backdrop-blur-md shadow-soft border-b border-gold/5" 
+          : "bg-gradient-to-b from-black/20 via-black/5 to-transparent backdrop-blur-sm"
       )}
     >
       <nav className="container mx-auto px-3 md:px-6 h-full flex items-center">
