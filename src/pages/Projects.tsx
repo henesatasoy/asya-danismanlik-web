@@ -193,9 +193,6 @@ const Projects = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer Separator */}
-      <div className="h-16 bg-gradient-to-b from-gray-50 to-background"></div>
     </div>
   );
 };

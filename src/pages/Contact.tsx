@@ -276,9 +276,6 @@ const Contact = () => {
           </Card>
         </div>
       </section>
-
-      {/* Footer Separator */}
-      <div className="h-16 bg-gradient-to-b from-secondary to-background"></div>
     </div>
   );
 };
