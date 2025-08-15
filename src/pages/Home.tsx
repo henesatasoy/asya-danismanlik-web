@@ -267,7 +267,10 @@ const Home = () => {
       </section>
 
       {/* Contact Preview Section */}
-      <section className="bg-gray-900 text-white relative py-20">
+      <section className="bg-gray-900 text-white relative py-32 border-b-4 border-gold/20">
+        {/* Subtle gradient overlay at the top */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+        
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             <div className="mb-20">
@@ -316,6 +319,12 @@ const Home = () => {
               </Button>
             </div>
           </div>
+        </div>
+        
+        {/* Elegant bottom separator with fade effect */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <div className="h-12 bg-gradient-to-b from-gray-900 to-transparent"></div>
+          <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
         </div>
       </section>
 
