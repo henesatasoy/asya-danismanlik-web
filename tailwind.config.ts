@@ -168,7 +168,8 @@ export default {
 				'scale-in': 'scale-in 0.4s ease-out',
 				'logo-float': 'logo-float 3s ease-in-out infinite',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite',
+				'spin-slow': 'spin 8s linear infinite'
 			}
 		}
 	},
