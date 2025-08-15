@@ -172,7 +172,7 @@ const About = () => {
         
         {/* Elegant bottom separator with fade effect */}
         <div className="absolute bottom-0 left-0 right-0">
-          <div className="h-12 bg-gradient-to-b from-gray-50 to-transparent"></div>
+          <div className="h-12 bg-gradient-to-b from-gray-600 to-transparent"></div>
           <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
         </div>
       </section>
