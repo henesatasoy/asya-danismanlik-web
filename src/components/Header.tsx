@@ -120,12 +120,18 @@ const Header = () => {
             >
               {/* Halka animasyonları */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-700">
-                {/* Dış halka - büyük ve parlak */}
-                <div className="absolute w-40 h-40 border-4 border-gold/60 rounded-full animate-spin-slow shadow-lg shadow-gold/20" style={{ animationDuration: '12s' }}></div>
-                {/* Orta halka - orta boy */}
-                <div className="absolute w-32 h-32 border-3 border-gold/80 rounded-full animate-spin-slow shadow-md shadow-gold/30" style={{ animationDuration: '8s', animationDirection: 'reverse' }}></div>
-                {/* İç halka - küçük ve yoğun */}
-                <div className="absolute w-24 h-24 border-2 border-gold rounded-full animate-spin-slow shadow-sm shadow-gold/40" style={{ animationDuration: '6s' }}></div>
+                {/* Dış halka - büyük ve parlak, kesikli */}
+                <div className="absolute w-40 h-40 border-4 border-dashed border-gold/70 rounded-full animate-spin-slow shadow-lg shadow-gold/20" style={{ animationDuration: '8s' }}></div>
+                {/* Orta halka - orta boy, noktalı */}
+                <div className="absolute w-32 h-32 border-3 border-dotted border-gold/80 rounded-full animate-spin-slow shadow-md shadow-gold/30" style={{ animationDuration: '6s', animationDirection: 'reverse' }}></div>
+                {/* İç halka - küçük ve yoğun, düz ama belirgin */}
+                <div className="absolute w-24 h-24 border-2 border-gold rounded-full animate-spin-slow shadow-sm shadow-gold/40" style={{ animationDuration: '4s' }}></div>
+                
+                {/* Halka üzerinde sabit noktalar - dönüş referansı için */}
+                <div className="absolute w-40 h-40">
+                  <div className="absolute w-2 h-2 bg-gold rounded-full animate-spin-slow" style={{ top: '0', left: '50%', transform: 'translateX(-50%)', animationDuration: '8s' }}></div>
+                  <div className="absolute w-2 h-2 bg-gold rounded-full animate-spin-slow" style={{ top: '50%', right: '0', transform: 'translateY(-50%)', animationDuration: '8s' }}></div>
+                </div>
                 
                 {/* Parlayan nokta efektleri - daha büyük ve belirgin */}
                 <div className="absolute w-3 h-3 bg-gold rounded-full animate-ping shadow-lg shadow-gold/50" style={{ top: '5%', left: '50%', transform: 'translateX(-50%)', animationDelay: '0s', animationDuration: '2s' }}></div>
