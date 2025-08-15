@@ -17,6 +17,8 @@ const Home = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Force rebuild to clear cache
+
   return <div className="relative">
       <FloatingParticles />
       {/* Hero Section */}
