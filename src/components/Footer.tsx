@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Instagram, Linkedin } from 'lucide-react';
 const Footer = () => {
-  return <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
+  return <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden z-50">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold/3 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold/3 rounded-full blur-3xl"></div>
