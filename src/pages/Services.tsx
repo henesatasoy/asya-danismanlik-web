@@ -205,6 +205,9 @@ const Services = () => {
         </div>
       </section>
 
+      
+      {/* Footer Separator */}
+      <div className="border-t border-gold/30"></div>
     </div>
   );
 };
