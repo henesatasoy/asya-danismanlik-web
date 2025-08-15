@@ -247,7 +247,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-32 bg-secondary border-b-2 border-gold/50 relative">
+      <section className="py-32 bg-secondary relative border-b-4 border-gold/20">
         {/* Subtle gradient overlay at the top */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
         
@@ -277,6 +277,12 @@ const Contact = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+        
+        {/* Elegant bottom separator with fade effect */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <div className="h-12 bg-gradient-to-b from-secondary to-transparent"></div>
+          <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
         </div>
       </section>
     </div>

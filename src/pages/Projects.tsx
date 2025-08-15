@@ -154,7 +154,7 @@ const Projects = () => {
       </section>
 
       {/* Sectors */}
-      <section className="py-32 bg-gradient-to-b from-gray-50 to-white relative border-b-2 border-gold/50">
+      <section className="py-32 bg-gradient-to-b from-gray-50 to-white relative border-b-4 border-gold/20">
         {/* Subtle gradient overlay at the top */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
         
@@ -194,6 +194,12 @@ const Projects = () => {
               </Card>
             ))}
           </div>
+        </div>
+        
+        {/* Elegant bottom separator with fade effect */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <div className="h-12 bg-gradient-to-b from-gray-50 to-transparent"></div>
+          <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
         </div>
       </section>
     </div>
