@@ -119,24 +119,31 @@ const Header = () => {
               className="group transition-all duration-500 hover:scale-110 relative"
             >
               {/* Halka animasyonları */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                {/* Dış halka */}
-                <div className="absolute w-32 h-32 border-2 border-gold/30 rounded-full animate-spin-slow" style={{ animationDuration: '8s' }}></div>
-                {/* Orta halka */}
-                <div className="absolute w-24 h-24 border-2 border-gold/50 rounded-full animate-spin-slow" style={{ animationDuration: '6s', animationDirection: 'reverse' }}></div>
-                {/* İç halka */}
-                <div className="absolute w-16 h-16 border-2 border-gold/70 rounded-full animate-spin-slow" style={{ animationDuration: '4s' }}></div>
-                {/* Nokta efektleri */}
-                <div className="absolute w-2 h-2 bg-gold rounded-full animate-ping" style={{ top: '10%', left: '50%', transform: 'translateX(-50%)', animationDelay: '0s' }}></div>
-                <div className="absolute w-2 h-2 bg-gold rounded-full animate-ping" style={{ top: '50%', right: '10%', transform: 'translateY(-50%)', animationDelay: '1s' }}></div>
-                <div className="absolute w-2 h-2 bg-gold rounded-full animate-ping" style={{ bottom: '10%', left: '50%', transform: 'translateX(-50%)', animationDelay: '2s' }}></div>
-                <div className="absolute w-2 h-2 bg-gold rounded-full animate-ping" style={{ top: '50%', left: '10%', transform: 'translateY(-50%)', animationDelay: '3s' }}></div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-700">
+                {/* Dış halka - büyük ve parlak */}
+                <div className="absolute w-40 h-40 border-4 border-gold/60 rounded-full animate-spin-slow shadow-lg shadow-gold/20" style={{ animationDuration: '12s' }}></div>
+                {/* Orta halka - orta boy */}
+                <div className="absolute w-32 h-32 border-3 border-gold/80 rounded-full animate-spin-slow shadow-md shadow-gold/30" style={{ animationDuration: '8s', animationDirection: 'reverse' }}></div>
+                {/* İç halka - küçük ve yoğun */}
+                <div className="absolute w-24 h-24 border-2 border-gold rounded-full animate-spin-slow shadow-sm shadow-gold/40" style={{ animationDuration: '6s' }}></div>
+                
+                {/* Parlayan nokta efektleri - daha büyük ve belirgin */}
+                <div className="absolute w-3 h-3 bg-gold rounded-full animate-ping shadow-lg shadow-gold/50" style={{ top: '5%', left: '50%', transform: 'translateX(-50%)', animationDelay: '0s', animationDuration: '2s' }}></div>
+                <div className="absolute w-3 h-3 bg-gold rounded-full animate-ping shadow-lg shadow-gold/50" style={{ top: '50%', right: '5%', transform: 'translateY(-50%)', animationDelay: '0.5s', animationDuration: '2s' }}></div>
+                <div className="absolute w-3 h-3 bg-gold rounded-full animate-ping shadow-lg shadow-gold/50" style={{ bottom: '5%', left: '50%', transform: 'translateX(-50%)', animationDelay: '1s', animationDuration: '2s' }}></div>
+                <div className="absolute w-3 h-3 bg-gold rounded-full animate-ping shadow-lg shadow-gold/50" style={{ top: '50%', left: '5%', transform: 'translateY(-50%)', animationDelay: '1.5s', animationDuration: '2s' }}></div>
+                
+                {/* Ek küçük parçacıklar */}
+                <div className="absolute w-1 h-1 bg-gold/80 rounded-full animate-ping" style={{ top: '20%', right: '25%', animationDelay: '2s', animationDuration: '1.5s' }}></div>
+                <div className="absolute w-1 h-1 bg-gold/80 rounded-full animate-ping" style={{ bottom: '20%', right: '25%', animationDelay: '2.5s', animationDuration: '1.5s' }}></div>
+                <div className="absolute w-1 h-1 bg-gold/80 rounded-full animate-ping" style={{ bottom: '25%', left: '20%', animationDelay: '3s', animationDuration: '1.5s' }}></div>
+                <div className="absolute w-1 h-1 bg-gold/80 rounded-full animate-ping" style={{ top: '25%', left: '20%', animationDelay: '3.5s', animationDuration: '1.5s' }}></div>
               </div>
               
               <img 
                 src="/lovable-uploads/6ae3607a-1bff-42d6-8d71-5848a2c20a8f.png" 
                 alt="Asya Danışmanlık Logo" 
-                className="h-20 w-auto filter drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-500 relative z-10"
+                className="h-20 w-auto filter drop-shadow-lg group-hover:drop-shadow-xl group-hover:brightness-110 transition-all duration-500 relative z-10"
               />
             </Link>
           </div>
