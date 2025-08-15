@@ -178,7 +178,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden border-b border-gold/30">
         {/* Subtle gradient overlay at the top */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
         
