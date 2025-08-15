@@ -6,11 +6,9 @@ import heroImage from '@/assets/hero-bg.jpg';
 import FloatingParticles from '@/components/FloatingParticles';
 import { useMousePosition } from '@/hooks/useMousePosition';
 import { useEffect, useState } from 'react';
-
 const Home = () => {
   const mousePosition = useMousePosition();
   const [scrollY, setScrollY] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
@@ -322,36 +320,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-black text-white relative py-[50px]">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-16 text-center max-w-5xl mx-auto">
-            <div className="group">
-              <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
-                <TrendingUp size={32} className="text-gold" />
-              </div>
-              <h3 className="text-6xl font-light text-gold mb-4 tracking-tight">500<span className="text-4xl">+</span></h3>
-              <p className="text-white/70 text-xl font-light tracking-wide">Başarılı Proje</p>
-            </div>
-            
-            <div className="group">
-              <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
-                <Users size={32} className="text-gold" />
-              </div>
-              <h3 className="text-6xl font-light text-gold mb-4 tracking-tight">250<span className="text-4xl">+</span></h3>
-              <p className="text-white/70 text-xl font-light tracking-wide">Mutlu Müşteri</p>
-            </div>
-            
-            <div className="group">
-              <div className="w-24 h-24 mx-auto mb-8 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20 group-hover:bg-gold/20 transition-colors duration-300">
-                <Target size={32} className="text-gold" />
-              </div>
-              <h3 className="text-6xl font-light text-gold mb-4 tracking-tight">10<span className="text-4xl">+</span></h3>
-              <p className="text-white/70 text-xl font-light tracking-wide">Yıllık Deneyim</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>;
 };
-
 export default Home;
