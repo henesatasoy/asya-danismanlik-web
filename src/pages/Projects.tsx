@@ -158,8 +158,8 @@ const Projects = () => {
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20 animate-slide-up">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 tracking-wide">
-              <span className="font-semibold text-gold">Hizmet Verdiğimiz</span> Sektörler
+            <h2 className="text-3xl md:text-4xl font-light text-gold mb-6 tracking-wide">
+              Hizmet Verdiğimiz Sektörler
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto font-light leading-relaxed">
