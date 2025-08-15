@@ -52,7 +52,7 @@ const Home = () => {
             Yatırım teşviklerinden iş geliştirmeye, stratejik planlamadan 
             kapasite artırımına kadar profesyonel danışmanlık hizmetleri.
           </p>
-          <Button asChild variant="elegant" size="lg" className="px-12 py-4 text-lg font-semibold group relative overflow-hidden" onMouseEnter={e => {
+          <Button asChild variant="elegant" size="lg" className="px-12 py-4 text-lg font-light group relative overflow-hidden" onMouseEnter={e => {
           const button = e.currentTarget;
           const rect = button.getBoundingClientRect();
           const x = mousePosition.x - rect.left;
@@ -90,7 +90,7 @@ const Home = () => {
                   <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center group-hover:bg-gold/10 transition-colors duration-300">
                     <DollarSign className="w-10 h-10 text-gold" />
                   </div>
-                  <h3 className="text-2xl font-medium text-gold mb-6 tracking-tight">
+                  <h3 className="text-2xl font-light text-gold mb-6 tracking-tight">
                     Yatırım Teşvik
                   </h3>
                   <p className="text-muted-foreground leading-relaxed flex-1">
@@ -108,7 +108,7 @@ const Home = () => {
                   <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center group-hover:bg-gold/10 transition-colors duration-300">
                     <Building className="w-10 h-10 text-gold" />
                   </div>
-                  <h3 className="text-2xl font-medium text-gold mb-6 tracking-tight">
+                  <h3 className="text-2xl font-light text-gold mb-6 tracking-tight">
                     İş Geliştirme
                   </h3>
                   <p className="text-muted-foreground leading-relaxed flex-1">
@@ -126,7 +126,7 @@ const Home = () => {
                   <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center group-hover:bg-gold/10 transition-colors duration-300">
                     <Zap className="w-10 h-10 text-gold" />
                   </div>
-                  <h3 className="text-2xl font-medium text-gold mb-6 tracking-tight">
+                  <h3 className="text-2xl font-light text-gold mb-6 tracking-tight">
                     Kapasite Geliştirme
                   </h3>
                   <p className="text-muted-foreground leading-relaxed flex-1">
@@ -140,14 +140,14 @@ const Home = () => {
 
           <div className="text-center mt-20">
             <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
-              <Button asChild variant="outline" size="lg" className="border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-sm font-medium tracking-wide">
+              <Button asChild variant="outline" size="lg" className="border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-sm font-light tracking-wide">
                 <Link to="/services">
                   Tüm Hizmetleri Keşfedin
                   <ArrowRight className="ml-2" size={16} />
                 </Link>
               </Button>
               
-              <Button asChild variant="elegant" size="lg" className="px-8 py-3 rounded-sm font-medium tracking-wide">
+              <Button asChild variant="elegant" size="lg" className="px-8 py-3 rounded-sm font-light tracking-wide">
                 <Link to="/contact">
                   İletişime Geçin
                   <ArrowRight className="ml-2" size={16} />
@@ -180,7 +180,7 @@ const Home = () => {
                   stratejik çözümler sunuyoruz. Deneyimli ekibimizle sektörün 
                   dinamiklerini takip ediyor, müşterilerimize özel çözümler geliştiriyoruz.
                 </p>
-                <Button asChild variant="outline" className="border-gold text-gold hover:bg-gold hover:text-white rounded-sm px-6 py-3 font-medium">
+                <Button asChild variant="outline" className="border-gold text-gold hover:bg-gold hover:text-white rounded-sm px-6 py-3 font-light">
                   <Link to="/about">
                     Detayları Keşfedin
                     <ArrowRight className="ml-2" size={16} />
@@ -193,7 +193,7 @@ const Home = () => {
                   <div className="w-16 h-16 mx-auto mb-6 bg-gold/5 rounded-full flex items-center justify-center">
                     <Award className="w-8 h-8 text-gold" />
                   </div>
-                  <h4 className="text-xl font-medium text-gold mb-3 tracking-tight">Uzman Ekip</h4>
+                  <h4 className="text-xl font-light text-gold mb-3 tracking-tight">Uzman Ekip</h4>
                   <p className="text-muted-foreground">Alanında deneyimli profesyoneller</p>
                 </div>
                 
@@ -201,7 +201,7 @@ const Home = () => {
                   <div className="w-16 h-16 mx-auto mb-6 bg-gold/5 rounded-full flex items-center justify-center">
                     <Target className="w-8 h-8 text-gold" />
                   </div>
-                  <h4 className="text-xl font-medium text-gold mb-3 tracking-tight">Hedef Odaklı</h4>
+                  <h4 className="text-xl font-light text-gold mb-3 tracking-tight">Hedef Odaklı</h4>
                   <p className="text-muted-foreground">Sonuç odaklı yaklaşım</p>
                 </div>
               </div>
@@ -228,7 +228,7 @@ const Home = () => {
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <Briefcase className="w-10 h-10 text-gold" />
               </div>
-              <h3 className="text-2xl font-medium text-gold mb-6 tracking-tight">İmalat Sektörü</h3>
+              <h3 className="text-2xl font-light text-gold mb-6 tracking-tight">İmalat Sektörü</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Büyük ölçekli üretim tesisleri için teşvik danışmanlığı ve iş geliştirme projeleri
               </p>
@@ -238,7 +238,7 @@ const Home = () => {
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <TrendingUp className="w-10 h-10 text-gold" />
               </div>
-              <h3 className="text-2xl font-medium text-gold mb-6 tracking-tight">Teknoloji</h3>
+              <h3 className="text-2xl font-light text-gold mb-6 tracking-tight">Teknoloji</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Yazılım ve teknoloji şirketleri için stratejik büyüme planlaması
               </p>
@@ -248,7 +248,7 @@ const Home = () => {
               <div className="w-20 h-20 mx-auto mb-8 bg-gold/5 rounded-full flex items-center justify-center">
                 <Building className="w-10 h-10 text-gold" />
               </div>
-              <h3 className="text-2xl font-medium text-gold mb-6 tracking-tight">Hizmet Sektörü</h3>
+              <h3 className="text-2xl font-light text-gold mb-6 tracking-tight">Hizmet Sektörü</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Hizmet işletmeleri için operasyonel verimlilik ve kapasite artırımı
               </p>
@@ -256,7 +256,7 @@ const Home = () => {
           </div>
           
           <div className="text-center">
-            <Button asChild variant="outline" className="border-gold text-gold hover:bg-gold hover:text-white rounded-sm px-6 py-3 font-medium">
+            <Button asChild variant="outline" className="border-gold text-gold hover:bg-gold hover:text-white rounded-sm px-6 py-3 font-light">
               <Link to="/projects">
                 Tüm Projeleri Görüntüle
                 <ArrowRight className="ml-2" size={16} />
@@ -289,7 +289,7 @@ const Home = () => {
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20">
                   <Mail className="w-10 h-10 text-gold" />
                 </div>
-                <h3 className="text-xl font-medium text-gold mb-4 tracking-tight">E-posta</h3>
+                <h3 className="text-xl font-light text-gold mb-4 tracking-tight">E-posta</h3>
                 <p className="text-white/70 text-lg">info@asyadanismanlik.com</p>
               </div>
               
@@ -297,7 +297,7 @@ const Home = () => {
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20">
                   <Building className="w-10 h-10 text-gold" />
                 </div>
-                <h3 className="text-xl font-medium text-gold mb-4 tracking-tight">Ofis</h3>
+                <h3 className="text-xl font-light text-gold mb-4 tracking-tight">Ofis</h3>
                 <p className="text-white/70 text-lg">Merkez / Bolu</p>
               </div>
               
@@ -305,13 +305,13 @@ const Home = () => {
                 <div className="w-20 h-20 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center border border-gold/20">
                   <Users className="w-10 h-10 text-gold" />
                 </div>
-                <h3 className="text-xl font-medium text-gold mb-4 tracking-tight">Danışmanlık</h3>
+                <h3 className="text-xl font-light text-gold mb-4 tracking-tight">Danışmanlık</h3>
                 <p className="text-white/70 text-lg">Ücretsiz ön görüşme</p>
               </div>
             </div>
             
             <div className="">
-              <Button asChild variant="elegant" size="lg" className="px-10 py-4 text-lg rounded-sm font-medium">
+              <Button asChild variant="elegant" size="lg" className="px-10 py-4 text-lg rounded-sm font-light">
                 <Link to="/contact">
                   İletişime Geçin
                   <ArrowRight className="ml-2" size={18} />
