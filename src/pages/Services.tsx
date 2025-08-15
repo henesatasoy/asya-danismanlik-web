@@ -205,6 +205,8 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Footer Separator */}
+      <div className="h-8 bg-gradient-to-b from-gray-900 to-background"></div>
     </div>
   );
 };
