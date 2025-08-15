@@ -145,8 +145,8 @@ const Contact = () => {
 
             {/* İletişim Formu */}
             <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <h2 className="text-3xl font-light text-foreground mb-10 tracking-wide">
-                <span className="text-gold font-semibold">Bize</span> Ulaşın
+              <h2 className="text-3xl font-light text-gold mb-10 tracking-wide">
+                Bize Ulaşın
               </h2>
               
               <Card className="hover:shadow-elegant transition-all duration-300">
