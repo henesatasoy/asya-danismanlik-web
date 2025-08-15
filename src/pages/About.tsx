@@ -65,8 +65,8 @@ const About = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 tracking-wide">
-              <span className="font-semibold text-gold">Değer</span>lerimiz
+            <h2 className="text-3xl md:text-4xl font-light text-gold mb-6 tracking-wide">
+              Değerlerimiz
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto font-light leading-relaxed">
