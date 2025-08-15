@@ -42,7 +42,7 @@ const Header = () => {
           </Link>
           
           {/* Mobil menü - yatay scroll */}
-          <div className="flex items-center space-x-6 overflow-x-auto scrollbar-hide">
+          <div className="flex items-center space-x-8 overflow-x-auto scrollbar-hide">
             <Link
               to="/about"
               className={cn(
@@ -89,7 +89,7 @@ const Header = () => {
         {/* Desktop görünüm */}
         <div className="hidden md:grid w-full grid-cols-[1fr_auto_1fr] items-center">
           {/* Sol menü */}
-          <div className="flex items-center justify-start space-x-12">
+          <div className="flex items-center justify-start space-x-16">
             <Link
               to="/about"
               className={cn(
@@ -149,7 +149,7 @@ const Header = () => {
           </div>
 
           {/* Sağ menü */}
-          <div className="flex items-center justify-end space-x-12">
+          <div className="flex items-center justify-end space-x-16">
             <Link
               to="/services"
               className={cn(
