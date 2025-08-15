@@ -126,7 +126,7 @@ const Projects = () => {
                        </Badge>
                      </div>
                      
-                     <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-gold transition-colors duration-300">
+                     <h3 className="text-xl font-light text-foreground mb-3 group-hover:text-gold transition-colors duration-300">
                        {project.title}
                      </h3>
                      
@@ -135,7 +135,7 @@ const Projects = () => {
                      </p>
                      
                      <div className="space-y-2">
-                       <h4 className="font-semibold text-gold text-sm">Sonuçlar:</h4>
+                       <h4 className="font-light text-gold text-sm">Sonuçlar:</h4>
                        <ul className="text-sm text-muted-foreground space-y-1">
                          {project.results.map((result, resultIndex) => (
                            <li key={resultIndex} className="flex items-center">
@@ -184,7 +184,7 @@ const Projects = () => {
             ].map((sector, index) => (
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-4 text-center">
-                  <p className="font-medium text-foreground group-hover:text-gold transition-colors duration-300">
+                  <p className="font-light text-foreground group-hover:text-gold transition-colors duration-300">
                     {sector}
                   </p>
                 </CardContent>
