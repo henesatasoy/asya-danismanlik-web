@@ -72,8 +72,8 @@ const Home = () => {
       <section className="bg-white relative border-b border-gray-100 py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-8 tracking-tight">
-              <span className="font-normal text-gold">Hizmet</span> Alanlarımız
+            <h2 className="text-4xl md:text-5xl font-light text-gold mb-8 tracking-tight">
+              Hizmet Alanlarımız
             </h2>
             <div className="w-24 h-px bg-gold mx-auto mb-8"></div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
