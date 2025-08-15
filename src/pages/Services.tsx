@@ -178,16 +178,13 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden border-b-4 border-gold/20">
-        {/* Subtle gradient overlay at the top */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
-        
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-wide text-gold">
-            Projeleriniz İçin Hemen Başlayın
+          <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-wide">
+            Projeleriniz İçin <span className="text-gold font-semibold">Hemen Başlayın</span>
           </h2>
           <div className="w-16 h-0.5 bg-gold mx-auto mb-8"></div>
           <p className="text-xl mb-12 text-white/70 max-w-xl mx-auto font-light leading-relaxed">
@@ -205,12 +202,6 @@ const Services = () => {
               <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform duration-300" size={20} />
             </Link>
           </Button>
-        </div>
-        
-        {/* Elegant bottom separator with fade effect */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <div className="h-12 bg-gradient-to-b from-gray-900 to-transparent"></div>
-          <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
         </div>
       </section>
     </div>

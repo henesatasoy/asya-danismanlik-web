@@ -119,10 +119,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-32 bg-gradient-to-b from-gray-50 to-white relative border-b-4 border-gold/20">
-        {/* Subtle gradient overlay at the top */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
-        
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20 animate-slide-up">
@@ -168,12 +165,6 @@ const About = () => {
               </CardContent>
             </Card>
           </div>
-        </div>
-        
-        {/* Elegant bottom separator with fade effect */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <div className="h-12 bg-gradient-to-b from-gray-900 to-transparent"></div>
-          <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
         </div>
       </section>
     </div>
