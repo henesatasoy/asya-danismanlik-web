@@ -68,8 +68,8 @@ const Contact = () => {
             
             {/* İletişim Bilgileri */}
             <div className="animate-slide-up">
-              <h2 className="text-3xl font-light text-foreground mb-10 tracking-wide">
-                <span className="text-gold font-semibold">İletişim</span> Bilgileri
+              <h2 className="text-3xl font-light text-gold mb-10 tracking-wide">
+                İletişim Bilgileri
               </h2>
               
               <div className="space-y-6">
