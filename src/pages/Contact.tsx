@@ -80,7 +80,7 @@ const Contact = () => {
                         <MapPin className="text-gold hover:scale-110 transition-transform duration-300" size={24} />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">Adres</h3>
+                        <h3 className="font-light text-foreground mb-1">Adres</h3>
                         <p className="text-muted-foreground">
                           İhsaniye Mahallesi, Çeşmeli Sok. No: 11/1<br />
                           Merkez, Bolu 14200
@@ -97,7 +97,7 @@ const Contact = () => {
                         <Phone className="text-gold" size={24} />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">Telefon</h3>
+                        <h3 className="font-light text-foreground mb-1">Telefon</h3>
                         <p className="text-muted-foreground">
                           +90 507 863 30 30
                         </p>
@@ -113,7 +113,7 @@ const Contact = () => {
                         <Mail className="text-gold" size={24} />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">E-posta</h3>
+                        <h3 className="font-light text-foreground mb-1">E-posta</h3>
                         <p className="text-muted-foreground">
                           info@asyadanismanlik.com<br />
                           destek@asyadanismanlik.com
@@ -130,7 +130,7 @@ const Contact = () => {
                         <Clock className="text-gold" size={24} />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">Çalışma Saatleri</h3>
+                        <h3 className="font-light text-foreground mb-1">Çalışma Saatleri</h3>
                         <p className="text-muted-foreground">
                           Pazartesi - Cuma: 09:00 - 18:00<br />
                           Cumartesi: 09:00 - 14:00<br />
@@ -233,7 +233,7 @@ const Contact = () => {
                       type="submit" 
                       variant="elegant"
                       size="lg" 
-                      className="w-full text-lg font-semibold group"
+                      className="w-full text-lg font-light group"
                     >
                       <Send className="mr-2 group-hover:translate-x-1 transition-transform duration-300" size={20} />
                       Mesaj Gönder
@@ -250,7 +250,7 @@ const Contact = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-light text-foreground mb-4">
               Ofisimizi Ziyaret Edin
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -263,7 +263,7 @@ const Contact = () => {
               <div className="w-full h-96 bg-muted flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="text-gold mx-auto mb-4" size={48} />
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                  <h3 className="text-xl font-light text-foreground mb-2">
                     Harita Entegrasyonu
                   </h3>
                   <p className="text-muted-foreground">
