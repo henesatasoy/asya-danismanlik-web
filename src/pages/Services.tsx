@@ -64,7 +64,7 @@ const Services = () => {
               <Card className="hover:shadow-glow transition-all duration-500 hover:-translate-y-3 hover:scale-105 border-0 bg-white/90 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <div className="bg-gold/10 rounded-lg p-6 text-center hover:bg-gold/20 transition-all duration-300">
-                    <h3 className="text-2xl font-bold text-gold mb-4">
+                    <h3 className="text-2xl font-light text-gold mb-4">
                       500+ Başarılı Teşvik Projesi
                     </h3>
                     <p className="text-muted-foreground">
@@ -83,7 +83,7 @@ const Services = () => {
               <Card className="hover:shadow-elegant transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="bg-gold/10 rounded-lg p-6 text-center">
-                    <h3 className="text-2xl font-bold text-gold mb-4">
+                    <h3 className="text-2xl font-light text-gold mb-4">
                       %250 Ortalama Büyüme
                     </h3>
                     <p className="text-muted-foreground">
@@ -99,7 +99,7 @@ const Services = () => {
                 <div className="w-16 h-16 mr-4 bg-gold/10 rounded-full flex items-center justify-center">
                   <Building className="w-8 h-8 text-gold" />
                 </div>
-                <h2 className="text-4xl font-bold text-gold">İş Geliştirme</h2>
+                <h2 className="text-4xl font-light text-gold">İş Geliştirme</h2>
               </div>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 İşletmenizin büyüme potansiyelini keşfediyor, yeni pazarlara açılmanızı 
@@ -133,7 +133,7 @@ const Services = () => {
                 <div className="w-16 h-16 mr-4 bg-gold/10 rounded-full flex items-center justify-center">
                   <Zap className="w-8 h-8 text-gold" />
                 </div>
-                <h2 className="text-4xl font-bold text-gold">Kapasite Geliştirme</h2>
+                <h2 className="text-4xl font-light text-gold">Kapasite Geliştirme</h2>
               </div>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 İnsan kaynakları ve operasyonel süreçlerinizi optimize ediyor, 
@@ -162,7 +162,7 @@ const Services = () => {
               <Card className="hover:shadow-elegant transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="bg-gold/10 rounded-lg p-6 text-center">
-                    <h3 className="text-2xl font-bold text-gold mb-4">
+                    <h3 className="text-2xl font-light text-gold mb-4">
                       1000+ Eğitim Saati
                     </h3>
                     <p className="text-muted-foreground">
