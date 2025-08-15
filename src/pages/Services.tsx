@@ -205,12 +205,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Footer Separator */}
-      <div className="py-16 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="w-24 h-px bg-gold/40 mx-auto"></div>
-        </div>
-      </div>
     </div>
   );
 };
