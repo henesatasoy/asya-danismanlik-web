@@ -247,7 +247,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-32 bg-secondary border-b border-gold/30">
+      <section className="py-32 bg-secondary border-b-2 border-gold/50 relative">
         {/* Subtle gradient overlay at the top */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
         

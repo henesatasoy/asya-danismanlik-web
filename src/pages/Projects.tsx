@@ -154,7 +154,7 @@ const Projects = () => {
       </section>
 
       {/* Sectors */}
-      <section className="py-32 bg-gradient-to-b from-gray-50 to-white relative border-b border-gold/30">
+      <section className="py-32 bg-gradient-to-b from-gray-50 to-white relative border-b-2 border-gold/50">
         {/* Subtle gradient overlay at the top */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
         
